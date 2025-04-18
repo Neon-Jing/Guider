@@ -1,0 +1,13 @@
+embedding_size: 64
+feat_embed_dim: 64
+weight_size: 64
+
+lambda_coeff: 1e-3
+reg_weight: 1e-4
+
+n_mm_layers: 1
+n_ui_layers: 2
+knn_k: 20
+
+mm_image_weight: 0.1
+dropout: 0.1

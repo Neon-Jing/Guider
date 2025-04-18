@@ -1,0 +1,11 @@
+embedding_size: 64
+feat_embed_dim: 64
+
+n_layers: [1]  # 论文实验表明 1 层 GCN 最优
+dropout: [0.1]  # 论文建议范围 0.3~0.5
+reg_weight: [0.001, 0.1]  # 论文建议范围 0.01~0.1
+cl_weight: 0.01  # 论文未详细说明，可保持 2.0
+
+use_neg_sampling: Flase  # BM3 不使用负采样
+
+hyper_parameters: ["n_layers", "reg_weight", "dropout"]

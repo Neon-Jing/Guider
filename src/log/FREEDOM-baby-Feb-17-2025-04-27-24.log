@@ -1,0 +1,1306 @@
+Mon 17 Feb 2025 04:27:24 INFO ██Server: 	autodl-container-e16448864b-c6e926e5
+Mon 17 Feb 2025 04:27:24 INFO ██Dir: 	/root/autodl-tmp/Guider/src
+
+Mon 17 Feb 2025 04:27:24 INFO 
+gpu_id=0
+use_gpu=True
+seed=[42]
+data_path=../data/
+inter_splitting_label=x_label
+filter_out_cod_start_users=True
+is_multimodal_model=True
+checkpoint_dir=saved
+save_recommended_topk=True
+recommend_topk=recommend_topk/
+embedding_size=64
+weight_decay=0.0
+req_training=True
+epochs=1000
+stopping_step=20
+train_batch_size=2048
+learner=adam
+learning_rate=0.001
+learning_rate_scheduler=[1.0, 50]
+eval_step=5
+training_neg_sample_num=1
+use_neg_sampling=True
+use_full_sampling=False
+NEG_PREFIX=neg__
+USER_ID_FIELD=userID
+ITEM_ID_FIELD=itemID
+TIME_FIELD=timestamp
+field_separator=	
+metrics=['Recall', 'NDCG', 'Precision', 'MAP']
+topk=[5, 10, 20, 50]
+valid_metric=Recall@20
+eval_batch_size=4096
+use_raw_features=False
+max_txt_len=32
+max_img_size=256
+vocab_size=30522
+type_vocab_size=2
+hidden_size=4
+pad_token_id=0
+max_position_embeddings=512
+layer_norm_eps=1e-12
+hidden_dropout_prob=0.1
+end2end=False
+hyper_parameters=['seed']
+inter_file_name=baby.inter
+vision_feature_file=image_feat.npy
+text_feature_file=text_feat.npy
+user_graph_dict_file=user_graph_dict.npy
+feat_embed_dim=64
+weight_size=64
+lambda_coeff=0.001
+reg_weight=0.0001
+n_mm_layers=1
+n_ui_layers=2
+knn_k=20
+mm_image_weight=0.1
+dropout=0.1
+model=FREEDOM
+dataset=baby
+valid_metric_bigger=True
+device=cuda
+
+
+Mon 17 Feb 2025 04:27:24 INFO ██Server: 	autodl-container-e16448864b-c6e926e5
+Mon 17 Feb 2025 04:27:24 INFO ██Dir: 	/root/autodl-tmp/Guider/src
+
+Mon 17 Feb 2025 04:27:24 INFO 
+gpu_id=0
+use_gpu=True
+seed=[42]
+data_path=../data/
+inter_splitting_label=x_label
+filter_out_cod_start_users=True
+is_multimodal_model=True
+checkpoint_dir=saved
+save_recommended_topk=True
+recommend_topk=recommend_topk/
+embedding_size=64
+weight_decay=0.0
+req_training=True
+epochs=1000
+stopping_step=20
+train_batch_size=2048
+learner=adam
+learning_rate=0.001
+learning_rate_scheduler=[1.0, 50]
+eval_step=5
+training_neg_sample_num=1
+use_neg_sampling=True
+use_full_sampling=False
+NEG_PREFIX=neg__
+USER_ID_FIELD=userID
+ITEM_ID_FIELD=itemID
+TIME_FIELD=timestamp
+field_separator=	
+metrics=['Recall', 'NDCG', 'Precision', 'MAP']
+topk=[5, 10, 20, 50]
+valid_metric=Recall@20
+eval_batch_size=4096
+use_raw_features=False
+max_txt_len=32
+max_img_size=256
+vocab_size=30522
+type_vocab_size=2
+hidden_size=4
+pad_token_id=0
+max_position_embeddings=512
+layer_norm_eps=1e-12
+hidden_dropout_prob=0.1
+end2end=False
+hyper_parameters=['seed']
+inter_file_name=baby.inter
+vision_feature_file=image_feat.npy
+text_feature_file=text_feat.npy
+user_graph_dict_file=user_graph_dict.npy
+feat_embed_dim=64
+weight_size=64
+lambda_coeff=0.001
+reg_weight=0.0001
+n_mm_layers=1
+n_ui_layers=2
+knn_k=20
+mm_image_weight=0.1
+dropout=0.1
+model=GUIDER
+dataset=baby
+valid_metric_bigger=True
+device=cuda
+
+
+Mon 17 Feb 2025 04:27:25 INFO baby
+The number of users: 19445
+Average actions of users: 8.269066598097197
+The number of items: 7050
+Average actions of items: 22.807375886524824
+The number of inters: 160792
+The sparsity of the dataset: 99.8827082752043%
+Mon 17 Feb 2025 04:27:25 INFO 
+====Training====
+baby
+The number of users: 19445
+Average actions of users: 6.096734379017742
+The number of items: 7047
+Average actions of items: 16.82290336313325
+The number of inters: 118551
+The sparsity of the dataset: 99.9134846831415%
+Mon 17 Feb 2025 04:27:25 INFO 
+====Validation====
+baby
+The number of users: 19445
+Average actions of users: 1.0572897917202366
+The number of items: 5483
+Average actions of items: 3.749589640707642
+The number of inters: 20559
+The sparsity of the dataset: 99.98071694707788%
+Mon 17 Feb 2025 04:27:25 INFO 
+====Testing====
+baby
+The number of users: 19445
+Average actions of users: 1.1150424273592183
+The number of items: 5549
+Average actions of items: 3.907370697422959
+The number of inters: 21682
+The sparsity of the dataset: 99.97990552482683%
+Mon 17 Feb 2025 04:27:33 INFO 
+
+=================================
+
+
+Mon 17 Feb 2025 04:27:33 INFO =========1/1: Parameters:['seed']=(42,)=======
+Mon 17 Feb 2025 04:27:34 INFO FREEDOM(
+  (user_embedding): Embedding(19445, 64)
+  (item_id_embedding): Embedding(7050, 64)
+  (image_embedding): Embedding(7050, 4096)
+  (image_trs): Linear(in_features=4096, out_features=64, bias=True)
+  (text_embedding): Embedding(7050, 384)
+  (text_trs): Linear(in_features=384, out_features=64, bias=True)
+)
+Trainable parameters: 33566528
+Mon 17 Feb 2025 04:27:34 INFO GUIDER(
+  (user_embedding): Embedding(19445, 64)
+  (item_id_embedding): Embedding(7050, 64)
+  (image_embedding): Embedding(7050, 4096)
+  (image_trs): Linear(in_features=4096, out_features=64, bias=True)
+  (text_embedding): Embedding(7050, 384)
+  (text_trs): Linear(in_features=384, out_features=64, bias=True)
+)
+Trainable parameters: 33566528
+Mon 17 Feb 2025 04:27:38 INFO epoch 0 training [time: 3.80s, train loss: 33.2626]
+Mon 17 Feb 2025 04:27:38 INFO epoch 0 training [time: 3.80s, train loss: 40.3545]
+Mon 17 Feb 2025 04:27:42 INFO epoch 1 training [time: 3.69s, train loss: 28.2881]
+Mon 17 Feb 2025 04:27:42 INFO epoch 1 training [time: 3.69s, train loss: 39.6609]
+Mon 17 Feb 2025 04:27:46 INFO epoch 2 training [time: 3.73s, train loss: 29.0909]
+Mon 17 Feb 2025 04:27:46 INFO epoch 2 training [time: 3.73s, train loss: 36.8157]
+Mon 17 Feb 2025 04:27:49 INFO epoch 3 training [time: 3.72s, train loss: 28.4349]
+Mon 17 Feb 2025 04:27:49 INFO epoch 3 training [time: 3.72s, train loss: 32.1369]
+Mon 17 Feb 2025 04:27:53 INFO epoch 4 training [time: 3.75s, train loss: 25.2222]
+Mon 17 Feb 2025 04:27:53 INFO epoch 4 training [time: 3.75s, train loss: 28.4560]
+Mon 17 Feb 2025 04:28:00 INFO epoch 4 evaluating [time: 3.26s, valid_score: 0.065400]
+Mon 17 Feb 2025 04:28:00 INFO valid result: 
+recall@5: 0.0273    recall@10: 0.0424    recall@20: 0.0654    recall@50: 0.1177    ndcg@5: 0.0182    ndcg@10: 0.0230    ndcg@20: 0.0289    ndcg@50: 0.0393    precision@5: 0.0057    precision@10: 0.0045    precision@20: 0.0035    precision@50: 0.0025    map@5: 0.0149    map@10: 0.0169    map@20: 0.0184    map@50: 0.0200    
+Mon 17 Feb 2025 04:28:00 INFO test result: 
+recall@5: 0.0267    recall@10: 0.0435    recall@20: 0.0691    recall@50: 0.1200    ndcg@5: 0.0180    ndcg@10: 0.0235    ndcg@20: 0.0301    ndcg@50: 0.0403    precision@5: 0.0059    precision@10: 0.0048    precision@20: 0.0039    precision@50: 0.0027    map@5: 0.0146    map@10: 0.0168    map@20: 0.0186    map@50: 0.0202    
+Mon 17 Feb 2025 04:28:00 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:28:03 INFO epoch 5 training [time: 3.77s, train loss: 22.5199]
+Mon 17 Feb 2025 04:28:03 INFO epoch 5 training [time: 3.77s, train loss: 25.9251]
+Mon 17 Feb 2025 04:28:07 INFO epoch 6 training [time: 3.71s, train loss: 20.8449]
+Mon 17 Feb 2025 04:28:07 INFO epoch 6 training [time: 3.71s, train loss: 24.0943]
+Mon 17 Feb 2025 04:28:11 INFO epoch 7 training [time: 3.73s, train loss: 19.2644]
+Mon 17 Feb 2025 04:28:11 INFO epoch 7 training [time: 3.73s, train loss: 22.5943]
+Mon 17 Feb 2025 04:28:15 INFO epoch 8 training [time: 3.78s, train loss: 18.0535]
+Mon 17 Feb 2025 04:28:15 INFO epoch 8 training [time: 3.78s, train loss: 21.4665]
+Mon 17 Feb 2025 04:28:18 INFO epoch 9 training [time: 3.80s, train loss: 17.1880]
+Mon 17 Feb 2025 04:28:18 INFO epoch 9 training [time: 3.80s, train loss: 20.3133]
+Mon 17 Feb 2025 04:28:25 INFO epoch 9 evaluating [time: 3.19s, valid_score: 0.074300]
+Mon 17 Feb 2025 04:28:25 INFO valid result: 
+recall@5: 0.0292    recall@10: 0.0465    recall@20: 0.0743    recall@50: 0.1316    ndcg@5: 0.0193    ndcg@10: 0.0249    ndcg@20: 0.0319    ndcg@50: 0.0433    precision@5: 0.0061    precision@10: 0.0049    precision@20: 0.0039    precision@50: 0.0028    map@5: 0.0158    map@10: 0.0181    map@20: 0.0199    map@50: 0.0217    
+Mon 17 Feb 2025 04:28:25 INFO test result: 
+recall@5: 0.0300    recall@10: 0.0491    recall@20: 0.0752    recall@50: 0.1348    ndcg@5: 0.0194    ndcg@10: 0.0257    ndcg@20: 0.0324    ndcg@50: 0.0444    precision@5: 0.0066    precision@10: 0.0055    precision@20: 0.0042    precision@50: 0.0030    map@5: 0.0155    map@10: 0.0180    map@20: 0.0197    map@50: 0.0216    
+Mon 17 Feb 2025 04:28:25 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:28:29 INFO epoch 10 training [time: 3.77s, train loss: 16.5703]
+Mon 17 Feb 2025 04:28:29 INFO epoch 10 training [time: 3.77s, train loss: 19.2810]
+Mon 17 Feb 2025 04:28:32 INFO epoch 11 training [time: 3.79s, train loss: 16.0196]
+Mon 17 Feb 2025 04:28:32 INFO epoch 11 training [time: 3.79s, train loss: 18.4496]
+Mon 17 Feb 2025 04:28:36 INFO epoch 12 training [time: 3.74s, train loss: 15.6165]
+Mon 17 Feb 2025 04:28:36 INFO epoch 12 training [time: 3.74s, train loss: 17.5360]
+Mon 17 Feb 2025 04:28:40 INFO epoch 13 training [time: 3.70s, train loss: 15.1180]
+Mon 17 Feb 2025 04:28:40 INFO epoch 13 training [time: 3.70s, train loss: 16.8464]
+Mon 17 Feb 2025 04:28:44 INFO epoch 14 training [time: 3.81s, train loss: 14.5831]
+Mon 17 Feb 2025 04:28:44 INFO epoch 14 training [time: 3.81s, train loss: 16.1048]
+Mon 17 Feb 2025 04:28:50 INFO epoch 14 evaluating [time: 3.17s, valid_score: 0.079000]
+Mon 17 Feb 2025 04:28:50 INFO valid result: 
+recall@5: 0.0305    recall@10: 0.0493    recall@20: 0.0790    recall@50: 0.1396    ndcg@5: 0.0201    ndcg@10: 0.0262    ndcg@20: 0.0338    ndcg@50: 0.0458    precision@5: 0.0064    precision@10: 0.0052    precision@20: 0.0042    precision@50: 0.0030    map@5: 0.0164    map@10: 0.0189    map@20: 0.0209    map@50: 0.0228    
+Mon 17 Feb 2025 04:28:50 INFO test result: 
+recall@5: 0.0314    recall@10: 0.0511    recall@20: 0.0813    recall@50: 0.1427    ndcg@5: 0.0205    ndcg@10: 0.0269    ndcg@20: 0.0347    ndcg@50: 0.0472    precision@5: 0.0070    precision@10: 0.0057    precision@20: 0.0045    precision@50: 0.0032    map@5: 0.0163    map@10: 0.0189    map@20: 0.0210    map@50: 0.0230    
+Mon 17 Feb 2025 04:28:50 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:28:54 INFO epoch 15 training [time: 3.73s, train loss: 13.9895]
+Mon 17 Feb 2025 04:28:54 INFO epoch 15 training [time: 3.73s, train loss: 15.4284]
+Mon 17 Feb 2025 04:28:58 INFO epoch 16 training [time: 3.77s, train loss: 13.5052]
+Mon 17 Feb 2025 04:28:58 INFO epoch 16 training [time: 3.77s, train loss: 14.8745]
+Mon 17 Feb 2025 04:29:01 INFO epoch 17 training [time: 3.74s, train loss: 13.0113]
+Mon 17 Feb 2025 04:29:01 INFO epoch 17 training [time: 3.74s, train loss: 14.3294]
+Mon 17 Feb 2025 04:29:05 INFO epoch 18 training [time: 3.72s, train loss: 12.4818]
+Mon 17 Feb 2025 04:29:05 INFO epoch 18 training [time: 3.72s, train loss: 13.7727]
+Mon 17 Feb 2025 04:29:09 INFO epoch 19 training [time: 3.78s, train loss: 11.9179]
+Mon 17 Feb 2025 04:29:09 INFO epoch 19 training [time: 3.78s, train loss: 13.4076]
+Mon 17 Feb 2025 04:29:15 INFO epoch 19 evaluating [time: 3.15s, valid_score: 0.081900]
+Mon 17 Feb 2025 04:29:15 INFO valid result: 
+recall@5: 0.0314    recall@10: 0.0521    recall@20: 0.0819    recall@50: 0.1446    ndcg@5: 0.0210    ndcg@10: 0.0277    ndcg@20: 0.0353    ndcg@50: 0.0478    precision@5: 0.0066    precision@10: 0.0055    precision@20: 0.0043    precision@50: 0.0031    map@5: 0.0173    map@10: 0.0200    map@20: 0.0220    map@50: 0.0240    
+Mon 17 Feb 2025 04:29:15 INFO test result: 
+recall@5: 0.0328    recall@10: 0.0533    recall@20: 0.0856    recall@50: 0.1490    ndcg@5: 0.0215    ndcg@10: 0.0282    ndcg@20: 0.0365    ndcg@50: 0.0493    precision@5: 0.0073    precision@10: 0.0059    precision@20: 0.0047    precision@50: 0.0033    map@5: 0.0171    map@10: 0.0198    map@20: 0.0220    map@50: 0.0241    
+Mon 17 Feb 2025 04:29:15 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:29:19 INFO epoch 20 training [time: 3.77s, train loss: 11.4033]
+Mon 17 Feb 2025 04:29:19 INFO epoch 20 training [time: 3.77s, train loss: 12.7019]
+Mon 17 Feb 2025 04:29:23 INFO epoch 21 training [time: 3.79s, train loss: 11.0567]
+Mon 17 Feb 2025 04:29:23 INFO epoch 21 training [time: 3.79s, train loss: 12.3459]
+Mon 17 Feb 2025 04:29:26 INFO epoch 22 training [time: 3.66s, train loss: 10.5966]
+Mon 17 Feb 2025 04:29:26 INFO epoch 22 training [time: 3.66s, train loss: 11.8905]
+Mon 17 Feb 2025 04:29:30 INFO epoch 23 training [time: 3.86s, train loss: 10.1694]
+Mon 17 Feb 2025 04:29:30 INFO epoch 23 training [time: 3.86s, train loss: 11.5474]
+Mon 17 Feb 2025 04:29:34 INFO epoch 24 training [time: 3.73s, train loss: 9.8441]
+Mon 17 Feb 2025 04:29:34 INFO epoch 24 training [time: 3.73s, train loss: 11.1463]
+Mon 17 Feb 2025 04:29:40 INFO epoch 24 evaluating [time: 3.19s, valid_score: 0.084000]
+Mon 17 Feb 2025 04:29:40 INFO valid result: 
+recall@5: 0.0322    recall@10: 0.0544    recall@20: 0.0840    recall@50: 0.1504    ndcg@5: 0.0217    ndcg@10: 0.0290    ndcg@20: 0.0365    ndcg@50: 0.0497    precision@5: 0.0068    precision@10: 0.0057    precision@20: 0.0044    precision@50: 0.0032    map@5: 0.0180    map@10: 0.0210    map@20: 0.0230    map@50: 0.0250    
+Mon 17 Feb 2025 04:29:40 INFO test result: 
+recall@5: 0.0350    recall@10: 0.0546    recall@20: 0.0887    recall@50: 0.1511    ndcg@5: 0.0231    ndcg@10: 0.0295    ndcg@20: 0.0382    ndcg@50: 0.0508    precision@5: 0.0077    precision@10: 0.0061    precision@20: 0.0049    precision@50: 0.0034    map@5: 0.0185    map@10: 0.0211    map@20: 0.0234    map@50: 0.0254    
+Mon 17 Feb 2025 04:29:40 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:29:44 INFO epoch 25 training [time: 3.79s, train loss: 9.3909]
+Mon 17 Feb 2025 04:29:44 INFO epoch 25 training [time: 3.79s, train loss: 10.7450]
+Mon 17 Feb 2025 04:29:48 INFO epoch 26 training [time: 3.85s, train loss: 9.1148]
+Mon 17 Feb 2025 04:29:48 INFO epoch 26 training [time: 3.85s, train loss: 10.4342]
+Mon 17 Feb 2025 04:29:52 INFO epoch 27 training [time: 3.81s, train loss: 8.7798]
+Mon 17 Feb 2025 04:29:52 INFO epoch 27 training [time: 3.81s, train loss: 10.0966]
+Mon 17 Feb 2025 04:29:55 INFO epoch 28 training [time: 3.72s, train loss: 8.5291]
+Mon 17 Feb 2025 04:29:55 INFO epoch 28 training [time: 3.72s, train loss: 9.8790]
+Mon 17 Feb 2025 04:29:59 INFO epoch 29 training [time: 3.75s, train loss: 8.2183]
+Mon 17 Feb 2025 04:29:59 INFO epoch 29 training [time: 3.75s, train loss: 9.4951]
+Mon 17 Feb 2025 04:30:06 INFO epoch 29 evaluating [time: 3.16s, valid_score: 0.085800]
+Mon 17 Feb 2025 04:30:06 INFO valid result: 
+recall@5: 0.0332    recall@10: 0.0555    recall@20: 0.0858    recall@50: 0.1518    ndcg@5: 0.0224    ndcg@10: 0.0295    ndcg@20: 0.0372    ndcg@50: 0.0505    precision@5: 0.0070    precision@10: 0.0059    precision@20: 0.0045    precision@50: 0.0032    map@5: 0.0185    map@10: 0.0214    map@20: 0.0234    map@50: 0.0255    
+Mon 17 Feb 2025 04:30:06 INFO test result: 
+recall@5: 0.0363    recall@10: 0.0570    recall@20: 0.0898    recall@50: 0.1533    ndcg@5: 0.0237    ndcg@10: 0.0305    ndcg@20: 0.0389    ndcg@50: 0.0517    precision@5: 0.0080    precision@10: 0.0063    precision@20: 0.0050    precision@50: 0.0034    map@5: 0.0189    map@10: 0.0216    map@20: 0.0238    map@50: 0.0258    
+Mon 17 Feb 2025 04:30:06 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:30:09 INFO epoch 30 training [time: 3.74s, train loss: 7.8778]
+Mon 17 Feb 2025 04:30:09 INFO epoch 30 training [time: 3.74s, train loss: 9.2729]
+Mon 17 Feb 2025 04:30:13 INFO epoch 31 training [time: 3.82s, train loss: 7.6764]
+Mon 17 Feb 2025 04:30:13 INFO epoch 31 training [time: 3.82s, train loss: 8.9437]
+Mon 17 Feb 2025 04:30:17 INFO epoch 32 training [time: 3.80s, train loss: 7.4435]
+Mon 17 Feb 2025 04:30:17 INFO epoch 32 training [time: 3.80s, train loss: 8.7210]
+Mon 17 Feb 2025 04:30:21 INFO epoch 33 training [time: 3.87s, train loss: 7.2062]
+Mon 17 Feb 2025 04:30:21 INFO epoch 33 training [time: 3.87s, train loss: 8.4365]
+Mon 17 Feb 2025 04:30:25 INFO epoch 34 training [time: 3.82s, train loss: 7.0092]
+Mon 17 Feb 2025 04:30:25 INFO epoch 34 training [time: 3.82s, train loss: 8.2222]
+Mon 17 Feb 2025 04:30:31 INFO epoch 34 evaluating [time: 3.14s, valid_score: 0.089000]
+Mon 17 Feb 2025 04:30:31 INFO valid result: 
+recall@5: 0.0339    recall@10: 0.0553    recall@20: 0.0890    recall@50: 0.1537    ndcg@5: 0.0229    ndcg@10: 0.0298    ndcg@20: 0.0384    ndcg@50: 0.0513    precision@5: 0.0071    precision@10: 0.0058    precision@20: 0.0047    precision@50: 0.0033    map@5: 0.0190    map@10: 0.0218    map@20: 0.0240    map@50: 0.0261    
+Mon 17 Feb 2025 04:30:31 INFO test result: 
+recall@5: 0.0366    recall@10: 0.0570    recall@20: 0.0908    recall@50: 0.1566    ndcg@5: 0.0240    ndcg@10: 0.0307    ndcg@20: 0.0394    ndcg@50: 0.0527    precision@5: 0.0081    precision@10: 0.0063    precision@20: 0.0050    precision@50: 0.0035    map@5: 0.0192    map@10: 0.0219    map@20: 0.0242    map@50: 0.0263    
+Mon 17 Feb 2025 04:30:31 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:30:35 INFO epoch 35 training [time: 3.80s, train loss: 6.7821]
+Mon 17 Feb 2025 04:30:35 INFO epoch 35 training [time: 3.80s, train loss: 8.0283]
+Mon 17 Feb 2025 04:30:38 INFO epoch 36 training [time: 3.74s, train loss: 6.5977]
+Mon 17 Feb 2025 04:30:38 INFO epoch 36 training [time: 3.74s, train loss: 7.7666]
+Mon 17 Feb 2025 04:30:42 INFO epoch 37 training [time: 3.81s, train loss: 6.3751]
+Mon 17 Feb 2025 04:30:42 INFO epoch 37 training [time: 3.81s, train loss: 7.5637]
+Mon 17 Feb 2025 04:30:46 INFO epoch 38 training [time: 3.80s, train loss: 6.1499]
+Mon 17 Feb 2025 04:30:46 INFO epoch 38 training [time: 3.80s, train loss: 7.2934]
+Mon 17 Feb 2025 04:30:50 INFO epoch 39 training [time: 3.80s, train loss: 6.0271]
+Mon 17 Feb 2025 04:30:50 INFO epoch 39 training [time: 3.80s, train loss: 7.1117]
+Mon 17 Feb 2025 04:30:56 INFO epoch 39 evaluating [time: 3.21s, valid_score: 0.089100]
+Mon 17 Feb 2025 04:30:56 INFO valid result: 
+recall@5: 0.0343    recall@10: 0.0563    recall@20: 0.0891    recall@50: 0.1548    ndcg@5: 0.0231    ndcg@10: 0.0302    ndcg@20: 0.0386    ndcg@50: 0.0517    precision@5: 0.0073    precision@10: 0.0059    precision@20: 0.0047    precision@50: 0.0033    map@5: 0.0192    map@10: 0.0220    map@20: 0.0243    map@50: 0.0263    
+Mon 17 Feb 2025 04:30:56 INFO test result: 
+recall@5: 0.0370    recall@10: 0.0582    recall@20: 0.0919    recall@50: 0.1568    ndcg@5: 0.0244    ndcg@10: 0.0313    ndcg@20: 0.0400    ndcg@50: 0.0531    precision@5: 0.0082    precision@10: 0.0064    precision@20: 0.0051    precision@50: 0.0035    map@5: 0.0196    map@10: 0.0224    map@20: 0.0247    map@50: 0.0267    
+Mon 17 Feb 2025 04:30:56 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:31:00 INFO epoch 40 training [time: 3.76s, train loss: 5.7553]
+Mon 17 Feb 2025 04:31:00 INFO epoch 40 training [time: 3.76s, train loss: 6.9423]
+Mon 17 Feb 2025 04:31:04 INFO epoch 41 training [time: 3.76s, train loss: 5.6925]
+Mon 17 Feb 2025 04:31:04 INFO epoch 41 training [time: 3.76s, train loss: 6.7912]
+Mon 17 Feb 2025 04:31:08 INFO epoch 42 training [time: 3.82s, train loss: 5.5401]
+Mon 17 Feb 2025 04:31:08 INFO epoch 42 training [time: 3.82s, train loss: 6.5497]
+Mon 17 Feb 2025 04:31:11 INFO epoch 43 training [time: 3.76s, train loss: 5.4554]
+Mon 17 Feb 2025 04:31:11 INFO epoch 43 training [time: 3.76s, train loss: 6.4101]
+Mon 17 Feb 2025 04:31:15 INFO epoch 44 training [time: 3.77s, train loss: 5.2504]
+Mon 17 Feb 2025 04:31:15 INFO epoch 44 training [time: 3.77s, train loss: 6.1756]
+Mon 17 Feb 2025 04:31:21 INFO epoch 44 evaluating [time: 3.17s, valid_score: 0.089800]
+Mon 17 Feb 2025 04:31:21 INFO valid result: 
+recall@5: 0.0352    recall@10: 0.0568    recall@20: 0.0898    recall@50: 0.1552    ndcg@5: 0.0237    ndcg@10: 0.0307    ndcg@20: 0.0390    ndcg@50: 0.0521    precision@5: 0.0074    precision@10: 0.0060    precision@20: 0.0047    precision@50: 0.0033    map@5: 0.0196    map@10: 0.0224    map@20: 0.0246    map@50: 0.0267    
+Mon 17 Feb 2025 04:31:21 INFO test result: 
+recall@5: 0.0370    recall@10: 0.0580    recall@20: 0.0935    recall@50: 0.1565    ndcg@5: 0.0246    ndcg@10: 0.0315    ndcg@20: 0.0406    ndcg@50: 0.0533    precision@5: 0.0082    precision@10: 0.0064    precision@20: 0.0052    precision@50: 0.0035    map@5: 0.0198    map@10: 0.0225    map@20: 0.0250    map@50: 0.0270    
+Mon 17 Feb 2025 04:31:21 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:31:25 INFO epoch 45 training [time: 3.82s, train loss: 5.1194]
+Mon 17 Feb 2025 04:31:25 INFO epoch 45 training [time: 3.82s, train loss: 6.0276]
+Mon 17 Feb 2025 04:31:29 INFO epoch 46 training [time: 3.75s, train loss: 5.0596]
+Mon 17 Feb 2025 04:31:29 INFO epoch 46 training [time: 3.75s, train loss: 5.8721]
+Mon 17 Feb 2025 04:31:33 INFO epoch 47 training [time: 3.75s, train loss: 4.8888]
+Mon 17 Feb 2025 04:31:33 INFO epoch 47 training [time: 3.75s, train loss: 5.6819]
+Mon 17 Feb 2025 04:31:37 INFO epoch 48 training [time: 3.80s, train loss: 4.6942]
+Mon 17 Feb 2025 04:31:37 INFO epoch 48 training [time: 3.80s, train loss: 5.6304]
+Mon 17 Feb 2025 04:31:40 INFO epoch 49 training [time: 3.74s, train loss: 4.6108]
+Mon 17 Feb 2025 04:31:40 INFO epoch 49 training [time: 3.74s, train loss: 5.4441]
+Mon 17 Feb 2025 04:31:47 INFO epoch 49 evaluating [time: 3.14s, valid_score: 0.090300]
+Mon 17 Feb 2025 04:31:47 INFO valid result: 
+recall@5: 0.0354    recall@10: 0.0561    recall@20: 0.0903    recall@50: 0.1569    ndcg@5: 0.0240    ndcg@10: 0.0306    ndcg@20: 0.0393    ndcg@50: 0.0526    precision@5: 0.0075    precision@10: 0.0059    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0199    map@10: 0.0226    map@20: 0.0249    map@50: 0.0270    
+Mon 17 Feb 2025 04:31:47 INFO test result: 
+recall@5: 0.0373    recall@10: 0.0586    recall@20: 0.0931    recall@50: 0.1581    ndcg@5: 0.0248    ndcg@10: 0.0317    ndcg@20: 0.0406    ndcg@50: 0.0537    precision@5: 0.0082    precision@10: 0.0065    precision@20: 0.0052    precision@50: 0.0035    map@5: 0.0199    map@10: 0.0227    map@20: 0.0251    map@50: 0.0271    
+Mon 17 Feb 2025 04:31:47 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:31:50 INFO epoch 50 training [time: 3.79s, train loss: 4.4521]
+Mon 17 Feb 2025 04:31:50 INFO epoch 50 training [time: 3.79s, train loss: 5.3232]
+Mon 17 Feb 2025 04:31:54 INFO epoch 51 training [time: 3.77s, train loss: 4.4168]
+Mon 17 Feb 2025 04:31:54 INFO epoch 51 training [time: 3.77s, train loss: 5.1718]
+Mon 17 Feb 2025 04:31:58 INFO epoch 52 training [time: 3.78s, train loss: 4.3141]
+Mon 17 Feb 2025 04:31:58 INFO epoch 52 training [time: 3.78s, train loss: 5.0335]
+Mon 17 Feb 2025 04:32:02 INFO epoch 53 training [time: 3.79s, train loss: 4.1860]
+Mon 17 Feb 2025 04:32:02 INFO epoch 53 training [time: 3.79s, train loss: 5.0047]
+Mon 17 Feb 2025 04:32:06 INFO epoch 54 training [time: 3.75s, train loss: 4.1140]
+Mon 17 Feb 2025 04:32:06 INFO epoch 54 training [time: 3.75s, train loss: 4.8136]
+Mon 17 Feb 2025 04:32:12 INFO epoch 54 evaluating [time: 3.15s, valid_score: 0.090100]
+Mon 17 Feb 2025 04:32:12 INFO valid result: 
+recall@5: 0.0356    recall@10: 0.0573    recall@20: 0.0901    recall@50: 0.1562    ndcg@5: 0.0241    ndcg@10: 0.0311    ndcg@20: 0.0394    ndcg@50: 0.0526    precision@5: 0.0075    precision@10: 0.0060    precision@20: 0.0047    precision@50: 0.0033    map@5: 0.0200    map@10: 0.0228    map@20: 0.0250    map@50: 0.0271    
+Mon 17 Feb 2025 04:32:12 INFO test result: 
+recall@5: 0.0375    recall@10: 0.0588    recall@20: 0.0939    recall@50: 0.1588    ndcg@5: 0.0250    ndcg@10: 0.0320    ndcg@20: 0.0410    ndcg@50: 0.0541    precision@5: 0.0083    precision@10: 0.0065    precision@20: 0.0052    precision@50: 0.0035    map@5: 0.0202    map@10: 0.0230    map@20: 0.0254    map@50: 0.0274    
+Mon 17 Feb 2025 04:32:16 INFO epoch 55 training [time: 3.85s, train loss: 4.0048]
+Mon 17 Feb 2025 04:32:16 INFO epoch 55 training [time: 3.85s, train loss: 4.7358]
+Mon 17 Feb 2025 04:32:20 INFO epoch 56 training [time: 3.79s, train loss: 3.9544]
+Mon 17 Feb 2025 04:32:20 INFO epoch 56 training [time: 3.79s, train loss: 4.5904]
+Mon 17 Feb 2025 04:32:23 INFO epoch 57 training [time: 3.76s, train loss: 3.8549]
+Mon 17 Feb 2025 04:32:23 INFO epoch 57 training [time: 3.76s, train loss: 4.4987]
+Mon 17 Feb 2025 04:32:27 INFO epoch 58 training [time: 3.75s, train loss: 3.7967]
+Mon 17 Feb 2025 04:32:27 INFO epoch 58 training [time: 3.75s, train loss: 4.3824]
+Mon 17 Feb 2025 04:32:31 INFO epoch 59 training [time: 3.74s, train loss: 3.7060]
+Mon 17 Feb 2025 04:32:31 INFO epoch 59 training [time: 3.74s, train loss: 4.2788]
+Mon 17 Feb 2025 04:32:37 INFO epoch 59 evaluating [time: 3.19s, valid_score: 0.090300]
+Mon 17 Feb 2025 04:32:37 INFO valid result: 
+recall@5: 0.0363    recall@10: 0.0578    recall@20: 0.0903    recall@50: 0.1561    ndcg@5: 0.0245    ndcg@10: 0.0316    ndcg@20: 0.0398    ndcg@50: 0.0530    precision@5: 0.0076    precision@10: 0.0061    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0204    map@10: 0.0232    map@20: 0.0254    map@50: 0.0275    
+Mon 17 Feb 2025 04:32:37 INFO test result: 
+recall@5: 0.0369    recall@10: 0.0596    recall@20: 0.0941    recall@50: 0.1602    ndcg@5: 0.0248    ndcg@10: 0.0322    ndcg@20: 0.0411    ndcg@50: 0.0544    precision@5: 0.0082    precision@10: 0.0066    precision@20: 0.0052    precision@50: 0.0036    map@5: 0.0201    map@10: 0.0231    map@20: 0.0254    map@50: 0.0275    
+Mon 17 Feb 2025 04:32:41 INFO epoch 60 training [time: 3.77s, train loss: 3.6274]
+Mon 17 Feb 2025 04:32:41 INFO epoch 60 training [time: 3.77s, train loss: 4.1579]
+Mon 17 Feb 2025 04:32:45 INFO epoch 61 training [time: 3.74s, train loss: 3.5359]
+Mon 17 Feb 2025 04:32:45 INFO epoch 61 training [time: 3.74s, train loss: 4.0663]
+Mon 17 Feb 2025 04:32:48 INFO epoch 62 training [time: 3.73s, train loss: 3.4711]
+Mon 17 Feb 2025 04:32:48 INFO epoch 62 training [time: 3.73s, train loss: 3.9903]
+Mon 17 Feb 2025 04:32:52 INFO epoch 63 training [time: 3.74s, train loss: 3.4103]
+Mon 17 Feb 2025 04:32:52 INFO epoch 63 training [time: 3.74s, train loss: 3.8909]
+Mon 17 Feb 2025 04:32:56 INFO epoch 64 training [time: 3.76s, train loss: 3.3485]
+Mon 17 Feb 2025 04:32:56 INFO epoch 64 training [time: 3.76s, train loss: 3.8117]
+Mon 17 Feb 2025 04:33:02 INFO epoch 64 evaluating [time: 3.22s, valid_score: 0.090500]
+Mon 17 Feb 2025 04:33:02 INFO valid result: 
+recall@5: 0.0366    recall@10: 0.0584    recall@20: 0.0905    recall@50: 0.1565    ndcg@5: 0.0246    ndcg@10: 0.0317    ndcg@20: 0.0399    ndcg@50: 0.0531    precision@5: 0.0077    precision@10: 0.0062    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0204    map@10: 0.0233    map@20: 0.0254    map@50: 0.0275    
+Mon 17 Feb 2025 04:33:02 INFO test result: 
+recall@5: 0.0375    recall@10: 0.0596    recall@20: 0.0928    recall@50: 0.1600    ndcg@5: 0.0251    ndcg@10: 0.0323    ndcg@20: 0.0408    ndcg@50: 0.0545    precision@5: 0.0083    precision@10: 0.0066    precision@20: 0.0051    precision@50: 0.0036    map@5: 0.0203    map@10: 0.0232    map@20: 0.0255    map@50: 0.0276    
+Mon 17 Feb 2025 04:33:02 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:33:06 INFO epoch 65 training [time: 3.74s, train loss: 3.3164]
+Mon 17 Feb 2025 04:33:06 INFO epoch 65 training [time: 3.74s, train loss: 3.7225]
+Mon 17 Feb 2025 04:33:10 INFO epoch 66 training [time: 3.77s, train loss: 3.1937]
+Mon 17 Feb 2025 04:33:10 INFO epoch 66 training [time: 3.77s, train loss: 3.6713]
+Mon 17 Feb 2025 04:33:14 INFO epoch 67 training [time: 3.81s, train loss: 3.1288]
+Mon 17 Feb 2025 04:33:14 INFO epoch 67 training [time: 3.81s, train loss: 3.5459]
+Mon 17 Feb 2025 04:33:17 INFO epoch 68 training [time: 3.75s, train loss: 3.1032]
+Mon 17 Feb 2025 04:33:17 INFO epoch 68 training [time: 3.75s, train loss: 3.4663]
+Mon 17 Feb 2025 04:33:21 INFO epoch 69 training [time: 3.70s, train loss: 2.9872]
+Mon 17 Feb 2025 04:33:21 INFO epoch 69 training [time: 3.70s, train loss: 3.4427]
+Mon 17 Feb 2025 04:33:27 INFO epoch 69 evaluating [time: 3.17s, valid_score: 0.090700]
+Mon 17 Feb 2025 04:33:27 INFO valid result: 
+recall@5: 0.0369    recall@10: 0.0587    recall@20: 0.0907    recall@50: 0.1566    ndcg@5: 0.0249    ndcg@10: 0.0319    ndcg@20: 0.0401    ndcg@50: 0.0532    precision@5: 0.0078    precision@10: 0.0062    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0206    map@10: 0.0234    map@20: 0.0256    map@50: 0.0277    
+Mon 17 Feb 2025 04:33:27 INFO test result: 
+recall@5: 0.0375    recall@10: 0.0607    recall@20: 0.0939    recall@50: 0.1614    ndcg@5: 0.0250    ndcg@10: 0.0325    ndcg@20: 0.0410    ndcg@50: 0.0547    precision@5: 0.0083    precision@10: 0.0067    precision@20: 0.0052    precision@50: 0.0036    map@5: 0.0201    map@10: 0.0232    map@20: 0.0254    map@50: 0.0275    
+Mon 17 Feb 2025 04:33:27 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:33:31 INFO epoch 70 training [time: 3.74s, train loss: 2.9954]
+Mon 17 Feb 2025 04:33:31 INFO epoch 70 training [time: 3.74s, train loss: 3.3613]
+Mon 17 Feb 2025 04:33:35 INFO epoch 71 training [time: 3.80s, train loss: 2.9423]
+Mon 17 Feb 2025 04:33:35 INFO epoch 71 training [time: 3.80s, train loss: 3.2181]
+Mon 17 Feb 2025 04:33:39 INFO epoch 72 training [time: 3.80s, train loss: 2.8594]
+Mon 17 Feb 2025 04:33:39 INFO epoch 72 training [time: 3.80s, train loss: 3.1764]
+Mon 17 Feb 2025 04:33:43 INFO epoch 73 training [time: 3.81s, train loss: 2.8557]
+Mon 17 Feb 2025 04:33:43 INFO epoch 73 training [time: 3.81s, train loss: 3.1132]
+Mon 17 Feb 2025 04:33:46 INFO epoch 74 training [time: 3.79s, train loss: 2.7254]
+Mon 17 Feb 2025 04:33:46 INFO epoch 74 training [time: 3.79s, train loss: 3.0884]
+Mon 17 Feb 2025 04:33:53 INFO epoch 74 evaluating [time: 3.15s, valid_score: 0.091300]
+Mon 17 Feb 2025 04:33:53 INFO valid result: 
+recall@5: 0.0378    recall@10: 0.0590    recall@20: 0.0913    recall@50: 0.1579    ndcg@5: 0.0251    ndcg@10: 0.0320    ndcg@20: 0.0402    ndcg@50: 0.0535    precision@5: 0.0080    precision@10: 0.0062    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0207    map@10: 0.0235    map@20: 0.0257    map@50: 0.0278    
+Mon 17 Feb 2025 04:33:53 INFO test result: 
+recall@5: 0.0382    recall@10: 0.0611    recall@20: 0.0942    recall@50: 0.1604    ndcg@5: 0.0253    ndcg@10: 0.0328    ndcg@20: 0.0413    ndcg@50: 0.0547    precision@5: 0.0084    precision@10: 0.0068    precision@20: 0.0052    precision@50: 0.0036    map@5: 0.0204    map@10: 0.0234    map@20: 0.0256    map@50: 0.0277    
+Mon 17 Feb 2025 04:33:53 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:33:56 INFO epoch 75 training [time: 3.74s, train loss: 2.6758]
+Mon 17 Feb 2025 04:33:56 INFO epoch 75 training [time: 3.74s, train loss: 2.9991]
+Mon 17 Feb 2025 04:34:00 INFO epoch 76 training [time: 3.75s, train loss: 2.6739]
+Mon 17 Feb 2025 04:34:00 INFO epoch 76 training [time: 3.75s, train loss: 2.9298]
+Mon 17 Feb 2025 04:34:04 INFO epoch 77 training [time: 3.63s, train loss: 2.6089]
+Mon 17 Feb 2025 04:34:04 INFO epoch 77 training [time: 3.63s, train loss: 2.9429]
+Mon 17 Feb 2025 04:34:08 INFO epoch 78 training [time: 3.77s, train loss: 2.5106]
+Mon 17 Feb 2025 04:34:08 INFO epoch 78 training [time: 3.77s, train loss: 2.8004]
+Mon 17 Feb 2025 04:34:11 INFO epoch 79 training [time: 3.74s, train loss: 2.4809]
+Mon 17 Feb 2025 04:34:11 INFO epoch 79 training [time: 3.74s, train loss: 2.8060]
+Mon 17 Feb 2025 04:34:18 INFO epoch 79 evaluating [time: 3.15s, valid_score: 0.091200]
+Mon 17 Feb 2025 04:34:18 INFO valid result: 
+recall@5: 0.0380    recall@10: 0.0601    recall@20: 0.0912    recall@50: 0.1584    ndcg@5: 0.0254    ndcg@10: 0.0325    ndcg@20: 0.0404    ndcg@50: 0.0538    precision@5: 0.0080    precision@10: 0.0063    precision@20: 0.0048    precision@50: 0.0034    map@5: 0.0210    map@10: 0.0238    map@20: 0.0259    map@50: 0.0280    
+Mon 17 Feb 2025 04:34:18 INFO test result: 
+recall@5: 0.0376    recall@10: 0.0610    recall@20: 0.0942    recall@50: 0.1608    ndcg@5: 0.0250    ndcg@10: 0.0327    ndcg@20: 0.0412    ndcg@50: 0.0547    precision@5: 0.0083    precision@10: 0.0067    precision@20: 0.0052    precision@50: 0.0036    map@5: 0.0202    map@10: 0.0233    map@20: 0.0256    map@50: 0.0277    
+Mon 17 Feb 2025 04:34:21 INFO epoch 80 training [time: 3.83s, train loss: 2.4435]
+Mon 17 Feb 2025 04:34:21 INFO epoch 80 training [time: 3.83s, train loss: 2.7269]
+Mon 17 Feb 2025 04:34:25 INFO epoch 81 training [time: 3.72s, train loss: 2.4370]
+Mon 17 Feb 2025 04:34:25 INFO epoch 81 training [time: 3.72s, train loss: 2.6913]
+Mon 17 Feb 2025 04:34:29 INFO epoch 82 training [time: 3.74s, train loss: 2.3641]
+Mon 17 Feb 2025 04:34:29 INFO epoch 82 training [time: 3.74s, train loss: 2.6330]
+Mon 17 Feb 2025 04:34:33 INFO epoch 83 training [time: 3.75s, train loss: 2.3511]
+Mon 17 Feb 2025 04:34:33 INFO epoch 83 training [time: 3.75s, train loss: 2.6344]
+Mon 17 Feb 2025 04:34:36 INFO epoch 84 training [time: 3.73s, train loss: 2.2452]
+Mon 17 Feb 2025 04:34:36 INFO epoch 84 training [time: 3.73s, train loss: 2.5261]
+Mon 17 Feb 2025 04:34:43 INFO epoch 84 evaluating [time: 3.14s, valid_score: 0.091600]
+Mon 17 Feb 2025 04:34:43 INFO valid result: 
+recall@5: 0.0377    recall@10: 0.0591    recall@20: 0.0916    recall@50: 0.1575    ndcg@5: 0.0254    ndcg@10: 0.0324    ndcg@20: 0.0406    ndcg@50: 0.0538    precision@5: 0.0079    precision@10: 0.0062    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0210    map@10: 0.0238    map@20: 0.0261    map@50: 0.0281    
+Mon 17 Feb 2025 04:34:43 INFO test result: 
+recall@5: 0.0379    recall@10: 0.0615    recall@20: 0.0947    recall@50: 0.1609    ndcg@5: 0.0253    ndcg@10: 0.0330    ndcg@20: 0.0416    ndcg@50: 0.0549    precision@5: 0.0083    precision@10: 0.0068    precision@20: 0.0052    precision@50: 0.0036    map@5: 0.0205    map@10: 0.0236    map@20: 0.0259    map@50: 0.0280    
+Mon 17 Feb 2025 04:34:43 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:34:46 INFO epoch 85 training [time: 3.80s, train loss: 2.2899]
+Mon 17 Feb 2025 04:34:46 INFO epoch 85 training [time: 3.80s, train loss: 2.5253]
+Mon 17 Feb 2025 04:34:50 INFO epoch 86 training [time: 3.77s, train loss: 2.1744]
+Mon 17 Feb 2025 04:34:50 INFO epoch 86 training [time: 3.77s, train loss: 2.4345]
+Mon 17 Feb 2025 04:34:54 INFO epoch 87 training [time: 3.77s, train loss: 2.1863]
+Mon 17 Feb 2025 04:34:54 INFO epoch 87 training [time: 3.77s, train loss: 2.4414]
+Mon 17 Feb 2025 04:34:58 INFO epoch 88 training [time: 3.74s, train loss: 2.2125]
+Mon 17 Feb 2025 04:34:58 INFO epoch 88 training [time: 3.74s, train loss: 2.3797]
+Mon 17 Feb 2025 04:35:01 INFO epoch 89 training [time: 3.77s, train loss: 2.1462]
+Mon 17 Feb 2025 04:35:01 INFO epoch 89 training [time: 3.77s, train loss: 2.3198]
+Mon 17 Feb 2025 04:35:08 INFO epoch 89 evaluating [time: 3.21s, valid_score: 0.091500]
+Mon 17 Feb 2025 04:35:08 INFO valid result: 
+recall@5: 0.0380    recall@10: 0.0589    recall@20: 0.0915    recall@50: 0.1574    ndcg@5: 0.0256    ndcg@10: 0.0323    ndcg@20: 0.0406    ndcg@50: 0.0537    precision@5: 0.0080    precision@10: 0.0062    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0211    map@10: 0.0239    map@20: 0.0261    map@50: 0.0282    
+Mon 17 Feb 2025 04:35:08 INFO test result: 
+recall@5: 0.0379    recall@10: 0.0620    recall@20: 0.0945    recall@50: 0.1613    ndcg@5: 0.0254    ndcg@10: 0.0332    ndcg@20: 0.0416    ndcg@50: 0.0551    precision@5: 0.0084    precision@10: 0.0068    precision@20: 0.0052    precision@50: 0.0036    map@5: 0.0206    map@10: 0.0237    map@20: 0.0259    map@50: 0.0281    
+Mon 17 Feb 2025 04:35:11 INFO epoch 90 training [time: 3.66s, train loss: 2.0990]
+Mon 17 Feb 2025 04:35:11 INFO epoch 90 training [time: 3.66s, train loss: 2.2830]
+Mon 17 Feb 2025 04:35:15 INFO epoch 91 training [time: 3.74s, train loss: 2.0740]
+Mon 17 Feb 2025 04:35:15 INFO epoch 91 training [time: 3.74s, train loss: 2.2608]
+Mon 17 Feb 2025 04:35:19 INFO epoch 92 training [time: 3.80s, train loss: 2.1118]
+Mon 17 Feb 2025 04:35:19 INFO epoch 92 training [time: 3.80s, train loss: 2.2540]
+Mon 17 Feb 2025 04:35:23 INFO epoch 93 training [time: 3.85s, train loss: 1.9870]
+Mon 17 Feb 2025 04:35:23 INFO epoch 93 training [time: 3.85s, train loss: 2.1862]
+Mon 17 Feb 2025 04:35:27 INFO epoch 94 training [time: 3.74s, train loss: 1.9876]
+Mon 17 Feb 2025 04:35:27 INFO epoch 94 training [time: 3.74s, train loss: 2.1350]
+Mon 17 Feb 2025 04:35:33 INFO epoch 94 evaluating [time: 3.19s, valid_score: 0.091200]
+Mon 17 Feb 2025 04:35:33 INFO valid result: 
+recall@5: 0.0375    recall@10: 0.0597    recall@20: 0.0912    recall@50: 0.1565    ndcg@5: 0.0252    ndcg@10: 0.0325    ndcg@20: 0.0404    ndcg@50: 0.0535    precision@5: 0.0079    precision@10: 0.0063    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0209    map@10: 0.0238    map@20: 0.0259    map@50: 0.0280    
+Mon 17 Feb 2025 04:35:33 INFO test result: 
+recall@5: 0.0379    recall@10: 0.0616    recall@20: 0.0940    recall@50: 0.1612    ndcg@5: 0.0255    ndcg@10: 0.0332    ndcg@20: 0.0416    ndcg@50: 0.0552    precision@5: 0.0084    precision@10: 0.0068    precision@20: 0.0052    precision@50: 0.0036    map@5: 0.0207    map@10: 0.0238    map@20: 0.0261    map@50: 0.0282    
+Mon 17 Feb 2025 04:35:37 INFO epoch 95 training [time: 3.76s, train loss: 1.9621]
+Mon 17 Feb 2025 04:35:37 INFO epoch 95 training [time: 3.76s, train loss: 2.1154]
+Mon 17 Feb 2025 04:35:40 INFO epoch 96 training [time: 3.72s, train loss: 1.8929]
+Mon 17 Feb 2025 04:35:40 INFO epoch 96 training [time: 3.72s, train loss: 2.0494]
+Mon 17 Feb 2025 04:35:44 INFO epoch 97 training [time: 3.77s, train loss: 1.8971]
+Mon 17 Feb 2025 04:35:44 INFO epoch 97 training [time: 3.77s, train loss: 1.9837]
+Mon 17 Feb 2025 04:35:48 INFO epoch 98 training [time: 3.76s, train loss: 1.8828]
+Mon 17 Feb 2025 04:35:48 INFO epoch 98 training [time: 3.76s, train loss: 1.9906]
+Mon 17 Feb 2025 04:35:52 INFO epoch 99 training [time: 3.80s, train loss: 1.8894]
+Mon 17 Feb 2025 04:35:52 INFO epoch 99 training [time: 3.80s, train loss: 1.9974]
+Mon 17 Feb 2025 04:35:58 INFO epoch 99 evaluating [time: 3.22s, valid_score: 0.092100]
+Mon 17 Feb 2025 04:35:58 INFO valid result: 
+recall@5: 0.0375    recall@10: 0.0600    recall@20: 0.0921    recall@50: 0.1565    ndcg@5: 0.0252    ndcg@10: 0.0325    ndcg@20: 0.0406    ndcg@50: 0.0535    precision@5: 0.0079    precision@10: 0.0063    precision@20: 0.0049    precision@50: 0.0033    map@5: 0.0208    map@10: 0.0238    map@20: 0.0259    map@50: 0.0280    
+Mon 17 Feb 2025 04:35:58 INFO test result: 
+recall@5: 0.0380    recall@10: 0.0620    recall@20: 0.0941    recall@50: 0.1606    ndcg@5: 0.0255    ndcg@10: 0.0333    ndcg@20: 0.0416    ndcg@50: 0.0550    precision@5: 0.0084    precision@10: 0.0069    precision@20: 0.0052    precision@50: 0.0036    map@5: 0.0207    map@10: 0.0238    map@20: 0.0260    map@50: 0.0281    
+Mon 17 Feb 2025 04:35:58 INFO ██ FREEDOM--Best validation results updated!!!
+Mon 17 Feb 2025 04:36:02 INFO epoch 100 training [time: 3.76s, train loss: 1.8330]
+Mon 17 Feb 2025 04:36:02 INFO epoch 100 training [time: 3.76s, train loss: 1.9220]
+Mon 17 Feb 2025 04:36:06 INFO epoch 101 training [time: 3.80s, train loss: 1.7562]
+Mon 17 Feb 2025 04:36:06 INFO epoch 101 training [time: 3.80s, train loss: 1.8837]
+Mon 17 Feb 2025 04:36:10 INFO epoch 102 training [time: 3.78s, train loss: 1.7682]
+Mon 17 Feb 2025 04:36:10 INFO epoch 102 training [time: 3.78s, train loss: 1.8852]
+Mon 17 Feb 2025 04:36:13 INFO epoch 103 training [time: 3.77s, train loss: 1.7139]
+Mon 17 Feb 2025 04:36:13 INFO epoch 103 training [time: 3.77s, train loss: 1.8109]
+Mon 17 Feb 2025 04:36:17 INFO epoch 104 training [time: 3.75s, train loss: 1.7147]
+Mon 17 Feb 2025 04:36:17 INFO epoch 104 training [time: 3.75s, train loss: 1.7897]
+Mon 17 Feb 2025 04:36:23 INFO epoch 104 evaluating [time: 3.18s, valid_score: 0.091700]
+Mon 17 Feb 2025 04:36:23 INFO valid result: 
+recall@5: 0.0378    recall@10: 0.0606    recall@20: 0.0917    recall@50: 0.1573    ndcg@5: 0.0253    ndcg@10: 0.0327    ndcg@20: 0.0406    ndcg@50: 0.0536    precision@5: 0.0080    precision@10: 0.0064    precision@20: 0.0049    precision@50: 0.0033    map@5: 0.0209    map@10: 0.0239    map@20: 0.0260    map@50: 0.0280    
+Mon 17 Feb 2025 04:36:23 INFO test result: 
+recall@5: 0.0380    recall@10: 0.0618    recall@20: 0.0936    recall@50: 0.1598    ndcg@5: 0.0255    ndcg@10: 0.0333    ndcg@20: 0.0415    ndcg@50: 0.0549    precision@5: 0.0084    precision@10: 0.0068    precision@20: 0.0052    precision@50: 0.0036    map@5: 0.0208    map@10: 0.0239    map@20: 0.0260    map@50: 0.0282    
+Mon 17 Feb 2025 04:36:27 INFO epoch 105 training [time: 3.81s, train loss: 1.7317]
+Mon 17 Feb 2025 04:36:27 INFO epoch 105 training [time: 3.81s, train loss: 1.7424]
+Mon 17 Feb 2025 04:36:31 INFO epoch 106 training [time: 3.84s, train loss: 1.6727]
+Mon 17 Feb 2025 04:36:31 INFO epoch 106 training [time: 3.84s, train loss: 1.7391]
+Mon 17 Feb 2025 04:36:35 INFO epoch 107 training [time: 3.79s, train loss: 1.6376]
+Mon 17 Feb 2025 04:36:35 INFO epoch 107 training [time: 3.79s, train loss: 1.7176]
+Mon 17 Feb 2025 04:36:39 INFO epoch 108 training [time: 3.80s, train loss: 1.5998]
+Mon 17 Feb 2025 04:36:39 INFO epoch 108 training [time: 3.80s, train loss: 1.6877]
+Mon 17 Feb 2025 04:36:42 INFO epoch 109 training [time: 3.78s, train loss: 1.6152]
+Mon 17 Feb 2025 04:36:42 INFO epoch 109 training [time: 3.78s, train loss: 1.7252]
+Mon 17 Feb 2025 04:36:49 INFO epoch 109 evaluating [time: 3.17s, valid_score: 0.091800]
+Mon 17 Feb 2025 04:36:49 INFO valid result: 
+recall@5: 0.0378    recall@10: 0.0603    recall@20: 0.0918    recall@50: 0.1567    ndcg@5: 0.0254    ndcg@10: 0.0327    ndcg@20: 0.0407    ndcg@50: 0.0536    precision@5: 0.0080    precision@10: 0.0064    precision@20: 0.0049    precision@50: 0.0033    map@5: 0.0210    map@10: 0.0240    map@20: 0.0261    map@50: 0.0281    
+Mon 17 Feb 2025 04:36:49 INFO test result: 
+recall@5: 0.0379    recall@10: 0.0608    recall@20: 0.0934    recall@50: 0.1602    ndcg@5: 0.0256    ndcg@10: 0.0331    ndcg@20: 0.0415    ndcg@50: 0.0551    precision@5: 0.0083    precision@10: 0.0067    precision@20: 0.0052    precision@50: 0.0036    map@5: 0.0209    map@10: 0.0239    map@20: 0.0262    map@50: 0.0283    
+Mon 17 Feb 2025 04:36:53 INFO epoch 110 training [time: 3.75s, train loss: 1.6012]
+Mon 17 Feb 2025 04:36:53 INFO epoch 110 training [time: 3.75s, train loss: 1.6313]
+Mon 17 Feb 2025 04:36:56 INFO epoch 111 training [time: 3.57s, train loss: 1.5730]
+Mon 17 Feb 2025 04:36:56 INFO epoch 111 training [time: 3.57s, train loss: 1.6471]
+Mon 17 Feb 2025 04:37:00 INFO epoch 112 training [time: 3.74s, train loss: 1.5736]
+Mon 17 Feb 2025 04:37:00 INFO epoch 112 training [time: 3.74s, train loss: 1.6030]
+Mon 17 Feb 2025 04:37:04 INFO epoch 113 training [time: 3.79s, train loss: 1.5628]
+Mon 17 Feb 2025 04:37:04 INFO epoch 113 training [time: 3.79s, train loss: 1.5696]
+Mon 17 Feb 2025 04:37:08 INFO epoch 114 training [time: 3.88s, train loss: 1.5277]
+Mon 17 Feb 2025 04:37:08 INFO epoch 114 training [time: 3.88s, train loss: 1.5581]
+Mon 17 Feb 2025 04:37:14 INFO epoch 114 evaluating [time: 3.14s, valid_score: 0.091300]
+Mon 17 Feb 2025 04:37:14 INFO valid result: 
+recall@5: 0.0373    recall@10: 0.0608    recall@20: 0.0913    recall@50: 0.1561    ndcg@5: 0.0250    ndcg@10: 0.0327    ndcg@20: 0.0405    ndcg@50: 0.0534    precision@5: 0.0079    precision@10: 0.0064    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0207    map@10: 0.0238    map@20: 0.0259    map@50: 0.0279    
+Mon 17 Feb 2025 04:37:14 INFO test result: 
+recall@5: 0.0379    recall@10: 0.0601    recall@20: 0.0929    recall@50: 0.1601    ndcg@5: 0.0256    ndcg@10: 0.0328    ndcg@20: 0.0413    ndcg@50: 0.0550    precision@5: 0.0083    precision@10: 0.0066    precision@20: 0.0051    precision@50: 0.0036    map@5: 0.0208    map@10: 0.0238    map@20: 0.0261    map@50: 0.0282    
+Mon 17 Feb 2025 04:37:18 INFO epoch 115 training [time: 3.85s, train loss: 1.4836]
+Mon 17 Feb 2025 04:37:18 INFO epoch 115 training [time: 3.85s, train loss: 1.5319]
+Mon 17 Feb 2025 04:37:22 INFO epoch 116 training [time: 3.79s, train loss: 1.4838]
+Mon 17 Feb 2025 04:37:22 INFO epoch 116 training [time: 3.79s, train loss: 1.4856]
+Mon 17 Feb 2025 04:37:25 INFO epoch 117 training [time: 3.76s, train loss: 1.4869]
+Mon 17 Feb 2025 04:37:25 INFO epoch 117 training [time: 3.76s, train loss: 1.5289]
+Mon 17 Feb 2025 04:37:29 INFO epoch 118 training [time: 3.72s, train loss: 1.4680]
+Mon 17 Feb 2025 04:37:29 INFO epoch 118 training [time: 3.72s, train loss: 1.5282]
+Mon 17 Feb 2025 04:37:33 INFO epoch 119 training [time: 3.85s, train loss: 1.4239]
+Mon 17 Feb 2025 04:37:33 INFO epoch 119 training [time: 3.85s, train loss: 1.4682]
+Mon 17 Feb 2025 04:37:39 INFO epoch 119 evaluating [time: 3.16s, valid_score: 0.090200]
+Mon 17 Feb 2025 04:37:39 INFO valid result: 
+recall@5: 0.0376    recall@10: 0.0606    recall@20: 0.0902    recall@50: 0.1555    ndcg@5: 0.0251    ndcg@10: 0.0326    ndcg@20: 0.0402    ndcg@50: 0.0533    precision@5: 0.0079    precision@10: 0.0064    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0207    map@10: 0.0237    map@20: 0.0258    map@50: 0.0279    
+Mon 17 Feb 2025 04:37:39 INFO test result: 
+recall@5: 0.0383    recall@10: 0.0608    recall@20: 0.0930    recall@50: 0.1596    ndcg@5: 0.0257    ndcg@10: 0.0330    ndcg@20: 0.0413    ndcg@50: 0.0548    precision@5: 0.0084    precision@10: 0.0067    precision@20: 0.0051    precision@50: 0.0036    map@5: 0.0209    map@10: 0.0238    map@20: 0.0260    map@50: 0.0282    
+Mon 17 Feb 2025 04:37:43 INFO epoch 120 training [time: 3.71s, train loss: 1.4190]
+Mon 17 Feb 2025 04:37:43 INFO epoch 120 training [time: 3.71s, train loss: 1.4318]
+Mon 17 Feb 2025 04:37:47 INFO epoch 121 training [time: 3.76s, train loss: 1.4087]
+Mon 17 Feb 2025 04:37:47 INFO epoch 121 training [time: 3.76s, train loss: 1.3857]
+Mon 17 Feb 2025 04:37:50 INFO epoch 122 training [time: 3.76s, train loss: 1.4025]
+Mon 17 Feb 2025 04:37:50 INFO epoch 122 training [time: 3.76s, train loss: 1.3880]
+Mon 17 Feb 2025 04:37:54 INFO epoch 123 training [time: 3.82s, train loss: 1.3918]
+Mon 17 Feb 2025 04:37:54 INFO epoch 123 training [time: 3.82s, train loss: 1.3534]
+Mon 17 Feb 2025 04:37:58 INFO epoch 124 training [time: 3.74s, train loss: 1.3725]
+Mon 17 Feb 2025 04:37:58 INFO epoch 124 training [time: 3.74s, train loss: 1.3313]
+Mon 17 Feb 2025 04:38:04 INFO epoch 124 evaluating [time: 3.20s, valid_score: 0.091400]
+Mon 17 Feb 2025 04:38:04 INFO valid result: 
+recall@5: 0.0374    recall@10: 0.0608    recall@20: 0.0914    recall@50: 0.1550    ndcg@5: 0.0250    ndcg@10: 0.0326    ndcg@20: 0.0404    ndcg@50: 0.0531    precision@5: 0.0079    precision@10: 0.0064    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0206    map@10: 0.0237    map@20: 0.0258    map@50: 0.0278    
+Mon 17 Feb 2025 04:38:04 INFO test result: 
+recall@5: 0.0387    recall@10: 0.0610    recall@20: 0.0940    recall@50: 0.1598    ndcg@5: 0.0258    ndcg@10: 0.0331    ndcg@20: 0.0416    ndcg@50: 0.0549    precision@5: 0.0085    precision@10: 0.0067    precision@20: 0.0052    precision@50: 0.0036    map@5: 0.0209    map@10: 0.0238    map@20: 0.0261    map@50: 0.0282    
+Mon 17 Feb 2025 04:38:08 INFO epoch 125 training [time: 3.73s, train loss: 1.3549]
+Mon 17 Feb 2025 04:38:08 INFO epoch 125 training [time: 3.73s, train loss: 1.3064]
+Mon 17 Feb 2025 04:38:12 INFO epoch 126 training [time: 3.71s, train loss: 1.3522]
+Mon 17 Feb 2025 04:38:12 INFO epoch 126 training [time: 3.71s, train loss: 1.3576]
+Mon 17 Feb 2025 04:38:15 INFO epoch 127 training [time: 3.72s, train loss: 1.3099]
+Mon 17 Feb 2025 04:38:15 INFO epoch 127 training [time: 3.72s, train loss: 1.3275]
+Mon 17 Feb 2025 04:38:19 INFO epoch 128 training [time: 3.73s, train loss: 1.3309]
+Mon 17 Feb 2025 04:38:19 INFO epoch 128 training [time: 3.73s, train loss: 1.2585]
+Mon 17 Feb 2025 04:38:23 INFO epoch 129 training [time: 3.75s, train loss: 1.2758]
+Mon 17 Feb 2025 04:38:23 INFO epoch 129 training [time: 3.75s, train loss: 1.2837]
+Mon 17 Feb 2025 04:38:29 INFO epoch 129 evaluating [time: 3.15s, valid_score: 0.090700]
+Mon 17 Feb 2025 04:38:29 INFO valid result: 
+recall@5: 0.0371    recall@10: 0.0611    recall@20: 0.0907    recall@50: 0.1551    ndcg@5: 0.0250    ndcg@10: 0.0329    ndcg@20: 0.0404    ndcg@50: 0.0533    precision@5: 0.0078    precision@10: 0.0065    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0207    map@10: 0.0239    map@20: 0.0259    map@50: 0.0280    
+Mon 17 Feb 2025 04:38:29 INFO test result: 
+recall@5: 0.0388    recall@10: 0.0612    recall@20: 0.0940    recall@50: 0.1596    ndcg@5: 0.0258    ndcg@10: 0.0330    ndcg@20: 0.0415    ndcg@50: 0.0548    precision@5: 0.0085    precision@10: 0.0067    precision@20: 0.0052    precision@50: 0.0036    map@5: 0.0208    map@10: 0.0237    map@20: 0.0259    map@50: 0.0280    
+Mon 17 Feb 2025 04:38:33 INFO epoch 130 training [time: 3.79s, train loss: 1.3097]
+Mon 17 Feb 2025 04:38:33 INFO epoch 130 training [time: 3.79s, train loss: 1.2622]
+Mon 17 Feb 2025 04:38:37 INFO epoch 131 training [time: 3.79s, train loss: 1.3006]
+Mon 17 Feb 2025 04:38:37 INFO epoch 131 training [time: 3.79s, train loss: 1.2484]
+Mon 17 Feb 2025 04:38:41 INFO epoch 132 training [time: 3.72s, train loss: 1.2557]
+Mon 17 Feb 2025 04:38:41 INFO epoch 132 training [time: 3.72s, train loss: 1.2529]
+Mon 17 Feb 2025 04:38:44 INFO epoch 133 training [time: 3.72s, train loss: 1.2892]
+Mon 17 Feb 2025 04:38:44 INFO epoch 133 training [time: 3.72s, train loss: 1.2257]
+Mon 17 Feb 2025 04:38:48 INFO epoch 134 training [time: 3.67s, train loss: 1.2496]
+Mon 17 Feb 2025 04:38:48 INFO epoch 134 training [time: 3.67s, train loss: 1.2066]
+Mon 17 Feb 2025 04:38:54 INFO epoch 134 evaluating [time: 3.18s, valid_score: 0.090500]
+Mon 17 Feb 2025 04:38:54 INFO valid result: 
+recall@5: 0.0370    recall@10: 0.0608    recall@20: 0.0905    recall@50: 0.1559    ndcg@5: 0.0249    ndcg@10: 0.0327    ndcg@20: 0.0403    ndcg@50: 0.0533    precision@5: 0.0078    precision@10: 0.0064    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0206    map@10: 0.0237    map@20: 0.0258    map@50: 0.0278    
+Mon 17 Feb 2025 04:38:54 INFO test result: 
+recall@5: 0.0389    recall@10: 0.0608    recall@20: 0.0940    recall@50: 0.1608    ndcg@5: 0.0258    ndcg@10: 0.0330    ndcg@20: 0.0415    ndcg@50: 0.0550    precision@5: 0.0086    precision@10: 0.0067    precision@20: 0.0052    precision@50: 0.0036    map@5: 0.0209    map@10: 0.0237    map@20: 0.0260    map@50: 0.0281    
+Mon 17 Feb 2025 04:38:58 INFO epoch 135 training [time: 3.73s, train loss: 1.2323]
+Mon 17 Feb 2025 04:38:58 INFO epoch 135 training [time: 3.73s, train loss: 1.2111]
+Mon 17 Feb 2025 04:39:02 INFO epoch 136 training [time: 3.74s, train loss: 1.2319]
+Mon 17 Feb 2025 04:39:02 INFO epoch 136 training [time: 3.74s, train loss: 1.1762]
+Mon 17 Feb 2025 04:39:06 INFO epoch 137 training [time: 3.74s, train loss: 1.2134]
+Mon 17 Feb 2025 04:39:06 INFO epoch 137 training [time: 3.74s, train loss: 1.1180]
+Mon 17 Feb 2025 04:39:09 INFO epoch 138 training [time: 3.80s, train loss: 1.2019]
+Mon 17 Feb 2025 04:39:09 INFO epoch 138 training [time: 3.80s, train loss: 1.1396]
+Mon 17 Feb 2025 04:39:13 INFO epoch 139 training [time: 3.75s, train loss: 1.1880]
+Mon 17 Feb 2025 04:39:13 INFO epoch 139 training [time: 3.75s, train loss: 1.1386]
+Mon 17 Feb 2025 04:39:19 INFO epoch 139 evaluating [time: 3.17s, valid_score: 0.090800]
+Mon 17 Feb 2025 04:39:19 INFO valid result: 
+recall@5: 0.0373    recall@10: 0.0598    recall@20: 0.0908    recall@50: 0.1556    ndcg@5: 0.0251    ndcg@10: 0.0324    ndcg@20: 0.0403    ndcg@50: 0.0533    precision@5: 0.0078    precision@10: 0.0063    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0207    map@10: 0.0237    map@20: 0.0259    map@50: 0.0279    
+Mon 17 Feb 2025 04:39:19 INFO test result: 
+recall@5: 0.0381    recall@10: 0.0605    recall@20: 0.0931    recall@50: 0.1588    ndcg@5: 0.0255    ndcg@10: 0.0328    ndcg@20: 0.0412    ndcg@50: 0.0545    precision@5: 0.0084    precision@10: 0.0067    precision@20: 0.0052    precision@50: 0.0035    map@5: 0.0207    map@10: 0.0236    map@20: 0.0258    map@50: 0.0279    
+Mon 17 Feb 2025 04:39:23 INFO epoch 140 training [time: 3.72s, train loss: 1.1774]
+Mon 17 Feb 2025 04:39:23 INFO epoch 140 training [time: 3.72s, train loss: 1.1142]
+Mon 17 Feb 2025 04:39:27 INFO epoch 141 training [time: 3.78s, train loss: 1.1725]
+Mon 17 Feb 2025 04:39:27 INFO epoch 141 training [time: 3.78s, train loss: 1.0785]
+Mon 17 Feb 2025 04:39:31 INFO epoch 142 training [time: 3.79s, train loss: 1.1663]
+Mon 17 Feb 2025 04:39:31 INFO epoch 142 training [time: 3.79s, train loss: 1.0895]
+Mon 17 Feb 2025 04:39:34 INFO epoch 143 training [time: 3.74s, train loss: 1.1357]
+Mon 17 Feb 2025 04:39:34 INFO epoch 143 training [time: 3.74s, train loss: 1.0676]
+Mon 17 Feb 2025 04:39:38 INFO epoch 144 training [time: 3.78s, train loss: 1.1513]
+Mon 17 Feb 2025 04:39:38 INFO epoch 144 training [time: 3.78s, train loss: 1.0440]
+Mon 17 Feb 2025 04:39:45 INFO epoch 144 evaluating [time: 3.16s, valid_score: 0.090100]
+Mon 17 Feb 2025 04:39:45 INFO valid result: 
+recall@5: 0.0375    recall@10: 0.0600    recall@20: 0.0901    recall@50: 0.1554    ndcg@5: 0.0252    ndcg@10: 0.0325    ndcg@20: 0.0403    ndcg@50: 0.0533    precision@5: 0.0079    precision@10: 0.0064    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0208    map@10: 0.0238    map@20: 0.0259    map@50: 0.0280    
+Mon 17 Feb 2025 04:39:45 INFO test result: 
+recall@5: 0.0381    recall@10: 0.0603    recall@20: 0.0937    recall@50: 0.1581    ndcg@5: 0.0254    ndcg@10: 0.0327    ndcg@20: 0.0413    ndcg@50: 0.0544    precision@5: 0.0084    precision@10: 0.0067    precision@20: 0.0052    precision@50: 0.0035    map@5: 0.0205    map@10: 0.0234    map@20: 0.0257    map@50: 0.0278    
+Mon 17 Feb 2025 04:39:48 INFO epoch 145 training [time: 3.83s, train loss: 1.1333]
+Mon 17 Feb 2025 04:39:48 INFO epoch 145 training [time: 3.83s, train loss: 1.0562]
+Mon 17 Feb 2025 04:39:52 INFO epoch 146 training [time: 3.81s, train loss: 1.1425]
+Mon 17 Feb 2025 04:39:52 INFO epoch 146 training [time: 3.81s, train loss: 1.0271]
+Mon 17 Feb 2025 04:39:56 INFO epoch 147 training [time: 3.80s, train loss: 1.1193]
+Mon 17 Feb 2025 04:39:56 INFO epoch 147 training [time: 3.80s, train loss: 1.0113]
+Mon 17 Feb 2025 04:40:00 INFO epoch 148 training [time: 3.74s, train loss: 1.1402]
+Mon 17 Feb 2025 04:40:00 INFO epoch 148 training [time: 3.74s, train loss: 1.0164]
+Mon 17 Feb 2025 04:40:04 INFO epoch 149 training [time: 3.71s, train loss: 1.0986]
+Mon 17 Feb 2025 04:40:04 INFO epoch 149 training [time: 3.71s, train loss: 0.9949]
+Mon 17 Feb 2025 04:40:10 INFO epoch 149 evaluating [time: 3.23s, valid_score: 0.090600]
+Mon 17 Feb 2025 04:40:10 INFO valid result: 
+recall@5: 0.0377    recall@10: 0.0601    recall@20: 0.0906    recall@50: 0.1550    ndcg@5: 0.0252    ndcg@10: 0.0325    ndcg@20: 0.0403    ndcg@50: 0.0532    precision@5: 0.0079    precision@10: 0.0064    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0207    map@10: 0.0237    map@20: 0.0259    map@50: 0.0279    
+Mon 17 Feb 2025 04:40:10 INFO test result: 
+recall@5: 0.0376    recall@10: 0.0604    recall@20: 0.0935    recall@50: 0.1580    ndcg@5: 0.0252    ndcg@10: 0.0327    ndcg@20: 0.0412    ndcg@50: 0.0543    precision@5: 0.0083    precision@10: 0.0067    precision@20: 0.0052    precision@50: 0.0035    map@5: 0.0205    map@10: 0.0235    map@20: 0.0258    map@50: 0.0278    
+Mon 17 Feb 2025 04:40:14 INFO epoch 150 training [time: 3.86s, train loss: 1.1013]
+Mon 17 Feb 2025 04:40:14 INFO epoch 150 training [time: 3.86s, train loss: 1.0222]
+Mon 17 Feb 2025 04:40:18 INFO epoch 151 training [time: 3.83s, train loss: 1.0885]
+Mon 17 Feb 2025 04:40:18 INFO epoch 151 training [time: 3.83s, train loss: 0.9367]
+Mon 17 Feb 2025 04:40:21 INFO epoch 152 training [time: 3.72s, train loss: 1.0887]
+Mon 17 Feb 2025 04:40:21 INFO epoch 152 training [time: 3.72s, train loss: 0.9889]
+Mon 17 Feb 2025 04:40:25 INFO epoch 153 training [time: 3.78s, train loss: 1.0872]
+Mon 17 Feb 2025 04:40:25 INFO epoch 153 training [time: 3.78s, train loss: 0.9571]
+Mon 17 Feb 2025 04:40:29 INFO epoch 154 training [time: 3.69s, train loss: 1.0565]
+Mon 17 Feb 2025 04:40:29 INFO epoch 154 training [time: 3.69s, train loss: 0.9322]
+Mon 17 Feb 2025 04:40:35 INFO epoch 154 evaluating [time: 3.18s, valid_score: 0.090800]
+Mon 17 Feb 2025 04:40:35 INFO valid result: 
+recall@5: 0.0377    recall@10: 0.0605    recall@20: 0.0908    recall@50: 0.1548    ndcg@5: 0.0250    ndcg@10: 0.0324    ndcg@20: 0.0401    ndcg@50: 0.0529    precision@5: 0.0079    precision@10: 0.0064    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0205    map@10: 0.0235    map@20: 0.0256    map@50: 0.0276    
+Mon 17 Feb 2025 04:40:35 INFO test result: 
+recall@5: 0.0384    recall@10: 0.0600    recall@20: 0.0936    recall@50: 0.1580    ndcg@5: 0.0255    ndcg@10: 0.0325    ndcg@20: 0.0412    ndcg@50: 0.0543    precision@5: 0.0085    precision@10: 0.0066    precision@20: 0.0052    precision@50: 0.0035    map@5: 0.0205    map@10: 0.0233    map@20: 0.0257    map@50: 0.0277    
+Mon 17 Feb 2025 04:40:39 INFO epoch 155 training [time: 3.71s, train loss: 1.0643]
+Mon 17 Feb 2025 04:40:39 INFO epoch 155 training [time: 3.71s, train loss: 0.9438]
+Mon 17 Feb 2025 04:40:43 INFO epoch 156 training [time: 3.64s, train loss: 1.0377]
+Mon 17 Feb 2025 04:40:43 INFO epoch 156 training [time: 3.64s, train loss: 0.9145]
+Mon 17 Feb 2025 04:40:46 INFO epoch 157 training [time: 3.81s, train loss: 1.0473]
+Mon 17 Feb 2025 04:40:46 INFO epoch 157 training [time: 3.81s, train loss: 0.9252]
+Mon 17 Feb 2025 04:40:50 INFO epoch 158 training [time: 3.78s, train loss: 1.0310]
+Mon 17 Feb 2025 04:40:50 INFO epoch 158 training [time: 3.78s, train loss: 0.8964]
+Mon 17 Feb 2025 04:40:54 INFO epoch 159 training [time: 3.68s, train loss: 1.0298]
+Mon 17 Feb 2025 04:40:54 INFO epoch 159 training [time: 3.68s, train loss: 0.9209]
+Mon 17 Feb 2025 04:41:00 INFO epoch 159 evaluating [time: 3.18s, valid_score: 0.091100]
+Mon 17 Feb 2025 04:41:00 INFO valid result: 
+recall@5: 0.0372    recall@10: 0.0595    recall@20: 0.0911    recall@50: 0.1544    ndcg@5: 0.0247    ndcg@10: 0.0321    ndcg@20: 0.0402    ndcg@50: 0.0528    precision@5: 0.0078    precision@10: 0.0063    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0203    map@10: 0.0233    map@20: 0.0255    map@50: 0.0275    
+Mon 17 Feb 2025 04:41:00 INFO test result: 
+recall@5: 0.0386    recall@10: 0.0603    recall@20: 0.0929    recall@50: 0.1583    ndcg@5: 0.0254    ndcg@10: 0.0325    ndcg@20: 0.0409    ndcg@50: 0.0542    precision@5: 0.0085    precision@10: 0.0066    precision@20: 0.0052    precision@50: 0.0035    map@5: 0.0204    map@10: 0.0232    map@20: 0.0255    map@50: 0.0276    
+Mon 17 Feb 2025 04:41:04 INFO epoch 160 training [time: 3.68s, train loss: 1.0255]
+Mon 17 Feb 2025 04:41:04 INFO epoch 160 training [time: 3.68s, train loss: 0.8850]
+Mon 17 Feb 2025 04:41:08 INFO epoch 161 training [time: 3.69s, train loss: 1.0289]
+Mon 17 Feb 2025 04:41:08 INFO epoch 161 training [time: 3.69s, train loss: 0.8485]
+Mon 17 Feb 2025 04:41:11 INFO epoch 162 training [time: 3.77s, train loss: 1.0549]
+Mon 17 Feb 2025 04:41:11 INFO epoch 162 training [time: 3.77s, train loss: 0.8329]
+Mon 17 Feb 2025 04:41:15 INFO epoch 163 training [time: 3.79s, train loss: 1.0276]
+Mon 17 Feb 2025 04:41:15 INFO epoch 163 training [time: 3.79s, train loss: 0.8605]
+Mon 17 Feb 2025 04:41:19 INFO epoch 164 training [time: 3.77s, train loss: 1.0164]
+Mon 17 Feb 2025 04:41:19 INFO epoch 164 training [time: 3.77s, train loss: 0.8578]
+Mon 17 Feb 2025 04:41:25 INFO epoch 164 evaluating [time: 3.14s, valid_score: 0.090000]
+Mon 17 Feb 2025 04:41:25 INFO valid result: 
+recall@5: 0.0374    recall@10: 0.0601    recall@20: 0.0900    recall@50: 0.1539    ndcg@5: 0.0249    ndcg@10: 0.0323    ndcg@20: 0.0400    ndcg@50: 0.0527    precision@5: 0.0078    precision@10: 0.0064    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0204    map@10: 0.0235    map@20: 0.0256    map@50: 0.0276    
+Mon 17 Feb 2025 04:41:25 INFO test result: 
+recall@5: 0.0393    recall@10: 0.0601    recall@20: 0.0935    recall@50: 0.1581    ndcg@5: 0.0257    ndcg@10: 0.0325    ndcg@20: 0.0411    ndcg@50: 0.0542    precision@5: 0.0086    precision@10: 0.0067    precision@20: 0.0052    precision@50: 0.0035    map@5: 0.0205    map@10: 0.0232    map@20: 0.0255    map@50: 0.0276    
+Mon 17 Feb 2025 04:41:29 INFO epoch 165 training [time: 3.74s, train loss: 0.9730]
+Mon 17 Feb 2025 04:41:29 INFO epoch 165 training [time: 3.74s, train loss: 0.8327]
+Mon 17 Feb 2025 04:41:33 INFO epoch 166 training [time: 3.71s, train loss: 0.9948]
+Mon 17 Feb 2025 04:41:33 INFO epoch 166 training [time: 3.71s, train loss: 0.8428]
+Mon 17 Feb 2025 04:41:36 INFO epoch 167 training [time: 3.71s, train loss: 0.9821]
+Mon 17 Feb 2025 04:41:36 INFO epoch 167 training [time: 3.71s, train loss: 0.8225]
+Mon 17 Feb 2025 04:41:40 INFO epoch 168 training [time: 3.72s, train loss: 0.9531]
+Mon 17 Feb 2025 04:41:40 INFO epoch 168 training [time: 3.72s, train loss: 0.8295]
+Mon 17 Feb 2025 04:41:44 INFO epoch 169 training [time: 3.75s, train loss: 0.9381]
+Mon 17 Feb 2025 04:41:44 INFO epoch 169 training [time: 3.75s, train loss: 0.8040]
+Mon 17 Feb 2025 04:41:50 INFO epoch 169 evaluating [time: 3.16s, valid_score: 0.090300]
+Mon 17 Feb 2025 04:41:50 INFO valid result: 
+recall@5: 0.0375    recall@10: 0.0605    recall@20: 0.0903    recall@50: 0.1543    ndcg@5: 0.0250    ndcg@10: 0.0325    ndcg@20: 0.0401    ndcg@50: 0.0529    precision@5: 0.0079    precision@10: 0.0064    precision@20: 0.0048    precision@50: 0.0033    map@5: 0.0205    map@10: 0.0236    map@20: 0.0257    map@50: 0.0277    
+Mon 17 Feb 2025 04:41:50 INFO test result: 
+recall@5: 0.0380    recall@10: 0.0597    recall@20: 0.0936    recall@50: 0.1591    ndcg@5: 0.0251    ndcg@10: 0.0322    ndcg@20: 0.0409    ndcg@50: 0.0542    precision@5: 0.0084    precision@10: 0.0066    precision@20: 0.0052    precision@50: 0.0035    map@5: 0.0201    map@10: 0.0230    map@20: 0.0253    map@50: 0.0274    
+Mon 17 Feb 2025 04:41:54 INFO epoch 170 training [time: 3.84s, train loss: 0.9218]
+Mon 17 Feb 2025 04:41:54 INFO epoch 170 training [time: 3.84s, train loss: 0.7906]
+Mon 17 Feb 2025 04:41:58 INFO epoch 171 training [time: 3.81s, train loss: 0.9574]
+Mon 17 Feb 2025 04:41:58 INFO epoch 171 training [time: 3.81s, train loss: 0.7808]
+Mon 17 Feb 2025 04:42:02 INFO epoch 172 training [time: 3.75s, train loss: 0.9483]
+Mon 17 Feb 2025 04:42:02 INFO epoch 172 training [time: 3.75s, train loss: 0.7837]
+Mon 17 Feb 2025 04:42:05 INFO epoch 173 training [time: 3.81s, train loss: 0.9291]
+Mon 17 Feb 2025 04:42:05 INFO epoch 173 training [time: 3.81s, train loss: 0.7787]
+Mon 17 Feb 2025 04:42:09 INFO epoch 174 training [time: 3.78s, train loss: 0.9330]
+Mon 17 Feb 2025 04:42:09 INFO epoch 174 training [time: 3.78s, train loss: 0.7438]
+Mon 17 Feb 2025 04:42:15 INFO epoch 174 evaluating [time: 3.19s, valid_score: 0.090700]
+Mon 17 Feb 2025 04:42:15 INFO valid result: 
+recall@5: 0.0376    recall@10: 0.0607    recall@20: 0.0907    recall@50: 0.1530    ndcg@5: 0.0250    ndcg@10: 0.0325    ndcg@20: 0.0402    ndcg@50: 0.0526    precision@5: 0.0079    precision@10: 0.0064    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0206    map@10: 0.0236    map@20: 0.0257    map@50: 0.0276    
+Mon 17 Feb 2025 04:42:15 INFO test result: 
+recall@5: 0.0377    recall@10: 0.0600    recall@20: 0.0937    recall@50: 0.1586    ndcg@5: 0.0250    ndcg@10: 0.0323    ndcg@20: 0.0410    ndcg@50: 0.0541    precision@5: 0.0083    precision@10: 0.0066    precision@20: 0.0052    precision@50: 0.0035    map@5: 0.0201    map@10: 0.0230    map@20: 0.0254    map@50: 0.0274    
+Mon 17 Feb 2025 04:42:19 INFO epoch 175 training [time: 3.73s, train loss: 0.9378]
+Mon 17 Feb 2025 04:42:19 INFO epoch 175 training [time: 3.73s, train loss: 0.7685]
+Mon 17 Feb 2025 04:42:23 INFO epoch 176 training [time: 3.62s, train loss: 0.9328]
+Mon 17 Feb 2025 04:42:23 INFO epoch 176 training [time: 3.62s, train loss: 0.7579]
+Mon 17 Feb 2025 04:42:26 INFO epoch 177 training [time: 3.65s, train loss: 0.9267]
+Mon 17 Feb 2025 04:42:26 INFO epoch 177 training [time: 3.65s, train loss: 0.7439]
+Mon 17 Feb 2025 04:42:30 INFO epoch 178 training [time: 3.82s, train loss: 0.9481]
+Mon 17 Feb 2025 04:42:30 INFO epoch 178 training [time: 3.82s, train loss: 0.7606]
+Mon 17 Feb 2025 04:42:34 INFO epoch 179 training [time: 3.79s, train loss: 0.9071]
+Mon 17 Feb 2025 04:42:34 INFO epoch 179 training [time: 3.79s, train loss: 0.7261]
+Mon 17 Feb 2025 04:42:40 INFO epoch 179 evaluating [time: 3.16s, valid_score: 0.091400]
+Mon 17 Feb 2025 04:42:40 INFO valid result: 
+recall@5: 0.0376    recall@10: 0.0595    recall@20: 0.0914    recall@50: 0.1525    ndcg@5: 0.0250    ndcg@10: 0.0321    ndcg@20: 0.0403    ndcg@50: 0.0525    precision@5: 0.0079    precision@10: 0.0063    precision@20: 0.0049    precision@50: 0.0032    map@5: 0.0205    map@10: 0.0234    map@20: 0.0256    map@50: 0.0275    
+Mon 17 Feb 2025 04:42:40 INFO test result: 
+recall@5: 0.0375    recall@10: 0.0608    recall@20: 0.0946    recall@50: 0.1583    ndcg@5: 0.0249    ndcg@10: 0.0325    ndcg@20: 0.0411    ndcg@50: 0.0540    precision@5: 0.0083    precision@10: 0.0067    precision@20: 0.0052    precision@50: 0.0035    map@5: 0.0200    map@10: 0.0231    map@20: 0.0254    map@50: 0.0274    
+Mon 17 Feb 2025 04:42:44 INFO epoch 180 training [time: 3.82s, train loss: 0.9201]
+Mon 17 Feb 2025 04:42:44 INFO epoch 180 training [time: 3.82s, train loss: 0.7212]
+Mon 17 Feb 2025 04:42:48 INFO epoch 181 training [time: 3.83s, train loss: 0.9079]
+Mon 17 Feb 2025 04:42:48 INFO epoch 181 training [time: 3.83s, train loss: 0.7046]
+Mon 17 Feb 2025 04:42:52 INFO epoch 182 training [time: 3.80s, train loss: 0.8973]
+Mon 17 Feb 2025 04:42:52 INFO epoch 182 training [time: 3.80s, train loss: 0.7349]
+Mon 17 Feb 2025 04:42:56 INFO epoch 183 training [time: 3.83s, train loss: 0.8832]
+Mon 17 Feb 2025 04:42:56 INFO epoch 183 training [time: 3.83s, train loss: 0.7141]
+Mon 17 Feb 2025 04:42:59 INFO epoch 184 training [time: 3.80s, train loss: 0.8781]
+Mon 17 Feb 2025 04:42:59 INFO epoch 184 training [time: 3.80s, train loss: 0.6925]
+Mon 17 Feb 2025 04:43:06 INFO epoch 184 evaluating [time: 3.20s, valid_score: 0.090900]
+Mon 17 Feb 2025 04:43:06 INFO valid result: 
+recall@5: 0.0377    recall@10: 0.0594    recall@20: 0.0909    recall@50: 0.1526    ndcg@5: 0.0249    ndcg@10: 0.0320    ndcg@20: 0.0401    ndcg@50: 0.0523    precision@5: 0.0079    precision@10: 0.0063    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0204    map@10: 0.0233    map@20: 0.0255    map@50: 0.0274    
+Mon 17 Feb 2025 04:43:06 INFO test result: 
+recall@5: 0.0376    recall@10: 0.0601    recall@20: 0.0938    recall@50: 0.1576    ndcg@5: 0.0247    ndcg@10: 0.0321    ndcg@20: 0.0407    ndcg@50: 0.0537    precision@5: 0.0083    precision@10: 0.0066    precision@20: 0.0052    precision@50: 0.0035    map@5: 0.0198    map@10: 0.0227    map@20: 0.0251    map@50: 0.0271    
+Mon 17 Feb 2025 04:43:10 INFO epoch 185 training [time: 3.82s, train loss: 0.8784]
+Mon 17 Feb 2025 04:43:10 INFO epoch 185 training [time: 3.82s, train loss: 0.6817]
+Mon 17 Feb 2025 04:43:14 INFO epoch 186 training [time: 3.83s, train loss: 0.8529]
+Mon 17 Feb 2025 04:43:14 INFO epoch 186 training [time: 3.83s, train loss: 0.7240]
+Mon 17 Feb 2025 04:43:17 INFO epoch 187 training [time: 3.75s, train loss: 0.8489]
+Mon 17 Feb 2025 04:43:17 INFO epoch 187 training [time: 3.75s, train loss: 0.6832]
+Mon 17 Feb 2025 04:43:21 INFO epoch 188 training [time: 3.82s, train loss: 0.8887]
+Mon 17 Feb 2025 04:43:21 INFO epoch 188 training [time: 3.82s, train loss: 0.6747]
+Mon 17 Feb 2025 04:43:25 INFO epoch 189 training [time: 3.90s, train loss: 0.8440]
+Mon 17 Feb 2025 04:43:25 INFO epoch 189 training [time: 3.90s, train loss: 0.6541]
+Mon 17 Feb 2025 04:43:31 INFO epoch 189 evaluating [time: 3.18s, valid_score: 0.090100]
+Mon 17 Feb 2025 04:43:31 INFO valid result: 
+recall@5: 0.0373    recall@10: 0.0594    recall@20: 0.0901    recall@50: 0.1529    ndcg@5: 0.0247    ndcg@10: 0.0320    ndcg@20: 0.0398    ndcg@50: 0.0523    precision@5: 0.0079    precision@10: 0.0063    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0203    map@10: 0.0232    map@20: 0.0253    map@50: 0.0273    
+Mon 17 Feb 2025 04:43:31 INFO test result: 
+recall@5: 0.0377    recall@10: 0.0603    recall@20: 0.0932    recall@50: 0.1579    ndcg@5: 0.0250    ndcg@10: 0.0324    ndcg@20: 0.0409    ndcg@50: 0.0540    precision@5: 0.0083    precision@10: 0.0067    precision@20: 0.0051    precision@50: 0.0035    map@5: 0.0202    map@10: 0.0232    map@20: 0.0254    map@50: 0.0275    
+Mon 17 Feb 2025 04:43:35 INFO epoch 190 training [time: 3.88s, train loss: 0.8433]
+Mon 17 Feb 2025 04:43:35 INFO epoch 190 training [time: 3.88s, train loss: 0.6652]
+Mon 17 Feb 2025 04:43:39 INFO epoch 191 training [time: 3.84s, train loss: 0.8215]
+Mon 17 Feb 2025 04:43:39 INFO epoch 191 training [time: 3.84s, train loss: 0.6595]
+Mon 17 Feb 2025 04:43:43 INFO epoch 192 training [time: 3.84s, train loss: 0.8436]
+Mon 17 Feb 2025 04:43:43 INFO epoch 192 training [time: 3.84s, train loss: 0.6322]
+Mon 17 Feb 2025 04:43:47 INFO epoch 193 training [time: 3.84s, train loss: 0.8132]
+Mon 17 Feb 2025 04:43:47 INFO epoch 193 training [time: 3.84s, train loss: 0.6379]
+Mon 17 Feb 2025 04:43:51 INFO epoch 194 training [time: 3.83s, train loss: 0.8428]
+Mon 17 Feb 2025 04:43:51 INFO epoch 194 training [time: 3.83s, train loss: 0.6534]
+Mon 17 Feb 2025 04:43:57 INFO epoch 194 evaluating [time: 3.22s, valid_score: 0.090300]
+Mon 17 Feb 2025 04:43:57 INFO valid result: 
+recall@5: 0.0373    recall@10: 0.0597    recall@20: 0.0903    recall@50: 0.1524    ndcg@5: 0.0247    ndcg@10: 0.0320    ndcg@20: 0.0398    ndcg@50: 0.0522    precision@5: 0.0079    precision@10: 0.0063    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0203    map@10: 0.0232    map@20: 0.0254    map@50: 0.0273    
+Mon 17 Feb 2025 04:43:57 INFO test result: 
+recall@5: 0.0376    recall@10: 0.0601    recall@20: 0.0926    recall@50: 0.1582    ndcg@5: 0.0249    ndcg@10: 0.0323    ndcg@20: 0.0406    ndcg@50: 0.0539    precision@5: 0.0083    precision@10: 0.0067    precision@20: 0.0051    precision@50: 0.0035    map@5: 0.0201    map@10: 0.0230    map@20: 0.0253    map@50: 0.0274    
+Mon 17 Feb 2025 04:44:01 INFO epoch 195 training [time: 3.85s, train loss: 0.8437]
+Mon 17 Feb 2025 04:44:01 INFO epoch 195 training [time: 3.85s, train loss: 0.6046]
+Mon 17 Feb 2025 04:44:05 INFO epoch 196 training [time: 3.76s, train loss: 0.8400]
+Mon 17 Feb 2025 04:44:05 INFO epoch 196 training [time: 3.76s, train loss: 0.6209]
+Mon 17 Feb 2025 04:44:08 INFO epoch 197 training [time: 3.78s, train loss: 0.8245]
+Mon 17 Feb 2025 04:44:08 INFO epoch 197 training [time: 3.78s, train loss: 0.6412]
+Mon 17 Feb 2025 04:44:12 INFO epoch 198 training [time: 3.84s, train loss: 0.8216]
+Mon 17 Feb 2025 04:44:12 INFO epoch 198 training [time: 3.84s, train loss: 0.6269]
+Mon 17 Feb 2025 04:44:16 INFO epoch 199 training [time: 3.76s, train loss: 0.8184]
+Mon 17 Feb 2025 04:44:16 INFO epoch 199 training [time: 3.76s, train loss: 0.6040]
+Mon 17 Feb 2025 04:44:22 INFO epoch 199 evaluating [time: 3.19s, valid_score: 0.090600]
+Mon 17 Feb 2025 04:44:22 INFO valid result: 
+recall@5: 0.0373    recall@10: 0.0589    recall@20: 0.0906    recall@50: 0.1522    ndcg@5: 0.0247    ndcg@10: 0.0318    ndcg@20: 0.0398    ndcg@50: 0.0521    precision@5: 0.0078    precision@10: 0.0063    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0202    map@10: 0.0231    map@20: 0.0253    map@50: 0.0272    
+Mon 17 Feb 2025 04:44:22 INFO test result: 
+recall@5: 0.0376    recall@10: 0.0606    recall@20: 0.0924    recall@50: 0.1572    ndcg@5: 0.0249    ndcg@10: 0.0324    ndcg@20: 0.0406    ndcg@50: 0.0537    precision@5: 0.0083    precision@10: 0.0067    precision@20: 0.0051    precision@50: 0.0035    map@5: 0.0200    map@10: 0.0230    map@20: 0.0252    map@50: 0.0273    
+Mon 17 Feb 2025 04:44:26 INFO epoch 200 training [time: 3.85s, train loss: 0.7951]
+Mon 17 Feb 2025 04:44:26 INFO epoch 200 training [time: 3.85s, train loss: 0.5968]
+Mon 17 Feb 2025 04:44:30 INFO epoch 201 training [time: 3.72s, train loss: 0.8071]
+Mon 17 Feb 2025 04:44:30 INFO epoch 201 training [time: 3.72s, train loss: 0.5698]
+Mon 17 Feb 2025 04:44:34 INFO epoch 202 training [time: 3.78s, train loss: 0.7923]
+Mon 17 Feb 2025 04:44:34 INFO epoch 202 training [time: 3.78s, train loss: 0.6229]
+Mon 17 Feb 2025 04:44:37 INFO epoch 203 training [time: 3.80s, train loss: 0.8290]
+Mon 17 Feb 2025 04:44:37 INFO epoch 203 training [time: 3.80s, train loss: 0.6057]
+Mon 17 Feb 2025 04:44:41 INFO epoch 204 training [time: 3.80s, train loss: 0.7853]
+Mon 17 Feb 2025 04:44:41 INFO epoch 204 training [time: 3.80s, train loss: 0.5867]
+Mon 17 Feb 2025 04:44:48 INFO epoch 204 evaluating [time: 3.15s, valid_score: 0.090200]
+Mon 17 Feb 2025 04:44:48 INFO valid result: 
+recall@5: 0.0369    recall@10: 0.0593    recall@20: 0.0902    recall@50: 0.1516    ndcg@5: 0.0245    ndcg@10: 0.0318    ndcg@20: 0.0397    ndcg@50: 0.0520    precision@5: 0.0078    precision@10: 0.0063    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0201    map@10: 0.0231    map@20: 0.0252    map@50: 0.0272    
+Mon 17 Feb 2025 04:44:48 INFO test result: 
+recall@5: 0.0379    recall@10: 0.0600    recall@20: 0.0928    recall@50: 0.1563    ndcg@5: 0.0250    ndcg@10: 0.0323    ndcg@20: 0.0407    ndcg@50: 0.0536    precision@5: 0.0083    precision@10: 0.0066    precision@20: 0.0051    precision@50: 0.0035    map@5: 0.0201    map@10: 0.0230    map@20: 0.0253    map@50: 0.0273    
+Mon 17 Feb 2025 04:44:51 INFO epoch 205 training [time: 3.87s, train loss: 0.7819]
+Mon 17 Feb 2025 04:44:51 INFO epoch 205 training [time: 3.87s, train loss: 0.5703]
+Mon 17 Feb 2025 04:44:55 INFO epoch 206 training [time: 3.81s, train loss: 0.8015]
+Mon 17 Feb 2025 04:44:55 INFO epoch 206 training [time: 3.81s, train loss: 0.5613]
+Mon 17 Feb 2025 04:44:59 INFO epoch 207 training [time: 3.65s, train loss: 0.7787]
+Mon 17 Feb 2025 04:44:59 INFO epoch 207 training [time: 3.65s, train loss: 0.6030]
+Mon 17 Feb 2025 04:45:03 INFO epoch 208 training [time: 3.83s, train loss: 0.7819]
+Mon 17 Feb 2025 04:45:03 INFO epoch 208 training [time: 3.83s, train loss: 0.5680]
+Mon 17 Feb 2025 04:45:07 INFO epoch 209 training [time: 3.75s, train loss: 0.7479]
+Mon 17 Feb 2025 04:45:07 INFO epoch 209 training [time: 3.75s, train loss: 0.5551]
+Mon 17 Feb 2025 04:45:13 INFO epoch 209 evaluating [time: 3.23s, valid_score: 0.089300]
+Mon 17 Feb 2025 04:45:13 INFO valid result: 
+recall@5: 0.0371    recall@10: 0.0588    recall@20: 0.0893    recall@50: 0.1514    ndcg@5: 0.0244    ndcg@10: 0.0316    ndcg@20: 0.0394    ndcg@50: 0.0518    precision@5: 0.0078    precision@10: 0.0062    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0200    map@10: 0.0229    map@20: 0.0250    map@50: 0.0269    
+Mon 17 Feb 2025 04:45:13 INFO test result: 
+recall@5: 0.0376    recall@10: 0.0604    recall@20: 0.0926    recall@50: 0.1560    ndcg@5: 0.0249    ndcg@10: 0.0324    ndcg@20: 0.0407    ndcg@50: 0.0535    precision@5: 0.0083    precision@10: 0.0067    precision@20: 0.0051    precision@50: 0.0035    map@5: 0.0201    map@10: 0.0231    map@20: 0.0253    map@50: 0.0273    
+Mon 17 Feb 2025 04:45:17 INFO epoch 210 training [time: 3.89s, train loss: 0.7523]
+Mon 17 Feb 2025 04:45:17 INFO epoch 210 training [time: 3.89s, train loss: 0.5643]
+Mon 17 Feb 2025 04:45:21 INFO epoch 211 training [time: 3.82s, train loss: 0.7480]
+Mon 17 Feb 2025 04:45:21 INFO epoch 211 training [time: 3.82s, train loss: 0.5610]
+Mon 17 Feb 2025 04:45:24 INFO epoch 212 training [time: 3.81s, train loss: 0.7550]
+Mon 17 Feb 2025 04:45:24 INFO epoch 212 training [time: 3.81s, train loss: 0.5472]
+Mon 17 Feb 2025 04:45:28 INFO epoch 213 training [time: 3.75s, train loss: 0.7741]
+Mon 17 Feb 2025 04:45:28 INFO epoch 213 training [time: 3.75s, train loss: 0.5253]
+Mon 17 Feb 2025 04:45:32 INFO epoch 214 training [time: 3.78s, train loss: 0.7453]
+Mon 17 Feb 2025 04:45:32 INFO epoch 214 training [time: 3.78s, train loss: 0.5616]
+Mon 17 Feb 2025 04:45:38 INFO epoch 214 evaluating [time: 3.17s, valid_score: 0.089900]
+Mon 17 Feb 2025 04:45:38 INFO valid result: 
+recall@5: 0.0382    recall@10: 0.0593    recall@20: 0.0899    recall@50: 0.1507    ndcg@5: 0.0249    ndcg@10: 0.0318    ndcg@20: 0.0396    ndcg@50: 0.0517    precision@5: 0.0080    precision@10: 0.0063    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0202    map@10: 0.0230    map@20: 0.0251    map@50: 0.0270    
+Mon 17 Feb 2025 04:45:38 INFO test result: 
+recall@5: 0.0372    recall@10: 0.0605    recall@20: 0.0929    recall@50: 0.1554    ndcg@5: 0.0246    ndcg@10: 0.0322    ndcg@20: 0.0406    ndcg@50: 0.0532    precision@5: 0.0082    precision@10: 0.0067    precision@20: 0.0051    precision@50: 0.0035    map@5: 0.0198    map@10: 0.0229    map@20: 0.0251    map@50: 0.0271    
+Mon 17 Feb 2025 04:45:42 INFO epoch 215 training [time: 3.77s, train loss: 0.7502]
+Mon 17 Feb 2025 04:45:42 INFO epoch 215 training [time: 3.77s, train loss: 0.5216]
+Mon 17 Feb 2025 04:45:46 INFO epoch 216 training [time: 3.83s, train loss: 0.7715]
+Mon 17 Feb 2025 04:45:46 INFO epoch 216 training [time: 3.83s, train loss: 0.5197]
+Mon 17 Feb 2025 04:45:50 INFO epoch 217 training [time: 3.83s, train loss: 0.7303]
+Mon 17 Feb 2025 04:45:50 INFO epoch 217 training [time: 3.83s, train loss: 0.5319]
+Mon 17 Feb 2025 04:45:54 INFO epoch 218 training [time: 3.84s, train loss: 0.7352]
+Mon 17 Feb 2025 04:45:54 INFO epoch 218 training [time: 3.84s, train loss: 0.5180]
+Mon 17 Feb 2025 04:45:57 INFO epoch 219 training [time: 3.79s, train loss: 0.7253]
+Mon 17 Feb 2025 04:45:57 INFO epoch 219 training [time: 3.79s, train loss: 0.5222]
+Mon 17 Feb 2025 04:46:04 INFO epoch 219 evaluating [time: 3.19s, valid_score: 0.089500]
+Mon 17 Feb 2025 04:46:04 INFO valid result: 
+recall@5: 0.0383    recall@10: 0.0592    recall@20: 0.0895    recall@50: 0.1497    ndcg@5: 0.0252    ndcg@10: 0.0321    ndcg@20: 0.0398    ndcg@50: 0.0518    precision@5: 0.0080    precision@10: 0.0063    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0206    map@10: 0.0234    map@20: 0.0255    map@50: 0.0274    
+Mon 17 Feb 2025 04:46:04 INFO test result: 
+recall@5: 0.0372    recall@10: 0.0606    recall@20: 0.0929    recall@50: 0.1559    ndcg@5: 0.0247    ndcg@10: 0.0324    ndcg@20: 0.0407    ndcg@50: 0.0534    precision@5: 0.0082    precision@10: 0.0067    precision@20: 0.0051    precision@50: 0.0035    map@5: 0.0200    map@10: 0.0230    map@20: 0.0252    map@50: 0.0272    
+Mon 17 Feb 2025 04:46:08 INFO epoch 220 training [time: 3.78s, train loss: 0.7388]
+Mon 17 Feb 2025 04:46:08 INFO epoch 220 training [time: 3.78s, train loss: 0.5287]
+Mon 17 Feb 2025 04:46:11 INFO epoch 221 training [time: 3.81s, train loss: 0.7235]
+Mon 17 Feb 2025 04:46:11 INFO epoch 221 training [time: 3.81s, train loss: 0.5029]
+Mon 17 Feb 2025 04:46:15 INFO epoch 222 training [time: 3.74s, train loss: 0.7301]
+Mon 17 Feb 2025 04:46:15 INFO epoch 222 training [time: 3.74s, train loss: 0.5143]
+Mon 17 Feb 2025 04:46:19 INFO epoch 223 training [time: 3.80s, train loss: 0.7253]
+Mon 17 Feb 2025 04:46:19 INFO epoch 223 training [time: 3.80s, train loss: 0.5161]
+Mon 17 Feb 2025 04:46:23 INFO epoch 224 training [time: 3.72s, train loss: 0.7280]
+Mon 17 Feb 2025 04:46:23 INFO epoch 224 training [time: 3.72s, train loss: 0.4939]
+Mon 17 Feb 2025 04:46:29 INFO epoch 224 evaluating [time: 3.14s, valid_score: 0.090200]
+Mon 17 Feb 2025 04:46:29 INFO valid result: 
+recall@5: 0.0378    recall@10: 0.0594    recall@20: 0.0902    recall@50: 0.1495    ndcg@5: 0.0250    ndcg@10: 0.0320    ndcg@20: 0.0398    ndcg@50: 0.0516    precision@5: 0.0080    precision@10: 0.0063    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0204    map@10: 0.0232    map@20: 0.0253    map@50: 0.0272    
+Mon 17 Feb 2025 04:46:29 INFO test result: 
+recall@5: 0.0372    recall@10: 0.0606    recall@20: 0.0927    recall@50: 0.1548    ndcg@5: 0.0246    ndcg@10: 0.0323    ndcg@20: 0.0405    ndcg@50: 0.0531    precision@5: 0.0082    precision@10: 0.0067    precision@20: 0.0051    precision@50: 0.0035    map@5: 0.0198    map@10: 0.0229    map@20: 0.0251    map@50: 0.0271    
+Mon 17 Feb 2025 04:46:33 INFO epoch 225 training [time: 3.82s, train loss: 0.7146]
+Mon 17 Feb 2025 04:46:33 INFO epoch 225 training [time: 3.82s, train loss: 0.5076]
+Mon 17 Feb 2025 04:46:37 INFO epoch 226 training [time: 3.84s, train loss: 0.7130]
+Mon 17 Feb 2025 04:46:37 INFO epoch 226 training [time: 3.84s, train loss: 0.4721]
+Mon 17 Feb 2025 04:46:40 INFO epoch 227 training [time: 3.75s, train loss: 0.7211]
+Mon 17 Feb 2025 04:46:40 INFO epoch 227 training [time: 3.75s, train loss: 0.4881]
+Mon 17 Feb 2025 04:46:44 INFO epoch 228 training [time: 3.76s, train loss: 0.7133]
+Mon 17 Feb 2025 04:46:44 INFO epoch 228 training [time: 3.76s, train loss: 0.5212]
+Mon 17 Feb 2025 04:46:48 INFO epoch 229 training [time: 3.76s, train loss: 0.6953]
+Mon 17 Feb 2025 04:46:48 INFO epoch 229 training [time: 3.76s, train loss: 0.4822]
+Mon 17 Feb 2025 04:46:54 INFO epoch 229 evaluating [time: 3.18s, valid_score: 0.090100]
+Mon 17 Feb 2025 04:46:54 INFO valid result: 
+recall@5: 0.0379    recall@10: 0.0591    recall@20: 0.0901    recall@50: 0.1497    ndcg@5: 0.0250    ndcg@10: 0.0319    ndcg@20: 0.0398    ndcg@50: 0.0517    precision@5: 0.0080    precision@10: 0.0063    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0205    map@10: 0.0233    map@20: 0.0254    map@50: 0.0272    
+Mon 17 Feb 2025 04:46:54 INFO test result: 
+recall@5: 0.0373    recall@10: 0.0610    recall@20: 0.0934    recall@50: 0.1549    ndcg@5: 0.0248    ndcg@10: 0.0325    ndcg@20: 0.0408    ndcg@50: 0.0533    precision@5: 0.0082    precision@10: 0.0067    precision@20: 0.0052    precision@50: 0.0035    map@5: 0.0200    map@10: 0.0231    map@20: 0.0253    map@50: 0.0272    
+Mon 17 Feb 2025 04:46:58 INFO epoch 230 training [time: 3.78s, train loss: 0.7267]
+Mon 17 Feb 2025 04:46:58 INFO epoch 230 training [time: 3.78s, train loss: 0.4875]
+Mon 17 Feb 2025 04:47:02 INFO epoch 231 training [time: 3.80s, train loss: 0.7108]
+Mon 17 Feb 2025 04:47:02 INFO epoch 231 training [time: 3.80s, train loss: 0.4751]
+Mon 17 Feb 2025 04:47:06 INFO epoch 232 training [time: 3.85s, train loss: 0.7054]
+Mon 17 Feb 2025 04:47:06 INFO epoch 232 training [time: 3.85s, train loss: 0.4726]
+Mon 17 Feb 2025 04:47:09 INFO epoch 233 training [time: 3.85s, train loss: 0.6920]
+Mon 17 Feb 2025 04:47:09 INFO epoch 233 training [time: 3.85s, train loss: 0.4600]
+Mon 17 Feb 2025 04:47:13 INFO epoch 234 training [time: 3.77s, train loss: 0.6818]
+Mon 17 Feb 2025 04:47:13 INFO epoch 234 training [time: 3.77s, train loss: 0.4902]
+Mon 17 Feb 2025 04:47:20 INFO epoch 234 evaluating [time: 3.23s, valid_score: 0.090200]
+Mon 17 Feb 2025 04:47:20 INFO valid result: 
+recall@5: 0.0378    recall@10: 0.0585    recall@20: 0.0902    recall@50: 0.1488    ndcg@5: 0.0249    ndcg@10: 0.0316    ndcg@20: 0.0396    ndcg@50: 0.0513    precision@5: 0.0080    precision@10: 0.0062    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0203    map@10: 0.0230    map@20: 0.0252    map@50: 0.0270    
+Mon 17 Feb 2025 04:47:20 INFO test result: 
+recall@5: 0.0373    recall@10: 0.0602    recall@20: 0.0928    recall@50: 0.1542    ndcg@5: 0.0247    ndcg@10: 0.0322    ndcg@20: 0.0406    ndcg@50: 0.0530    precision@5: 0.0082    precision@10: 0.0066    precision@20: 0.0051    precision@50: 0.0034    map@5: 0.0199    map@10: 0.0229    map@20: 0.0251    map@50: 0.0271    
+Mon 17 Feb 2025 04:47:23 INFO epoch 235 training [time: 3.76s, train loss: 0.6807]
+Mon 17 Feb 2025 04:47:23 INFO epoch 235 training [time: 3.76s, train loss: 0.4412]
+Mon 17 Feb 2025 04:47:27 INFO epoch 236 training [time: 3.81s, train loss: 0.6709]
+Mon 17 Feb 2025 04:47:27 INFO epoch 236 training [time: 3.81s, train loss: 0.4359]
+Mon 17 Feb 2025 04:47:31 INFO epoch 237 training [time: 3.85s, train loss: 0.6857]
+Mon 17 Feb 2025 04:47:31 INFO epoch 237 training [time: 3.85s, train loss: 0.4473]
+Mon 17 Feb 2025 04:47:35 INFO epoch 238 training [time: 3.79s, train loss: 0.6723]
+Mon 17 Feb 2025 04:47:35 INFO epoch 238 training [time: 3.79s, train loss: 0.4460]
+Mon 17 Feb 2025 04:47:39 INFO epoch 239 training [time: 3.76s, train loss: 0.6745]
+Mon 17 Feb 2025 04:47:39 INFO epoch 239 training [time: 3.76s, train loss: 0.4465]
+Mon 17 Feb 2025 04:47:45 INFO epoch 239 evaluating [time: 3.14s, valid_score: 0.090200]
+Mon 17 Feb 2025 04:47:45 INFO valid result: 
+recall@5: 0.0377    recall@10: 0.0583    recall@20: 0.0902    recall@50: 0.1494    ndcg@5: 0.0248    ndcg@10: 0.0316    ndcg@20: 0.0396    ndcg@50: 0.0515    precision@5: 0.0079    precision@10: 0.0062    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0203    map@10: 0.0230    map@20: 0.0252    map@50: 0.0270    
+Mon 17 Feb 2025 04:47:45 INFO test result: 
+recall@5: 0.0375    recall@10: 0.0603    recall@20: 0.0926    recall@50: 0.1537    ndcg@5: 0.0246    ndcg@10: 0.0321    ndcg@20: 0.0404    ndcg@50: 0.0528    precision@5: 0.0082    precision@10: 0.0066    precision@20: 0.0051    precision@50: 0.0034    map@5: 0.0198    map@10: 0.0228    map@20: 0.0250    map@50: 0.0270    
+Mon 17 Feb 2025 04:47:49 INFO epoch 240 training [time: 3.81s, train loss: 0.6648]
+Mon 17 Feb 2025 04:47:49 INFO epoch 240 training [time: 3.81s, train loss: 0.4317]
+Mon 17 Feb 2025 04:47:52 INFO epoch 241 training [time: 3.79s, train loss: 0.6986]
+Mon 17 Feb 2025 04:47:52 INFO epoch 241 training [time: 3.79s, train loss: 0.4447]
+Mon 17 Feb 2025 04:47:56 INFO epoch 242 training [time: 3.81s, train loss: 0.6658]
+Mon 17 Feb 2025 04:47:56 INFO epoch 242 training [time: 3.81s, train loss: 0.4396]
+Mon 17 Feb 2025 04:48:00 INFO epoch 243 training [time: 3.81s, train loss: 0.6991]
+Mon 17 Feb 2025 04:48:00 INFO epoch 243 training [time: 3.81s, train loss: 0.4492]
+Mon 17 Feb 2025 04:48:04 INFO epoch 244 training [time: 3.73s, train loss: 0.6661]
+Mon 17 Feb 2025 04:48:04 INFO epoch 244 training [time: 3.73s, train loss: 0.4369]
+Mon 17 Feb 2025 04:48:10 INFO epoch 244 evaluating [time: 3.25s, valid_score: 0.089600]
+Mon 17 Feb 2025 04:48:10 INFO valid result: 
+recall@5: 0.0373    recall@10: 0.0586    recall@20: 0.0896    recall@50: 0.1487    ndcg@5: 0.0249    ndcg@10: 0.0318    ndcg@20: 0.0397    ndcg@50: 0.0515    precision@5: 0.0079    precision@10: 0.0062    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0205    map@10: 0.0233    map@20: 0.0254    map@50: 0.0273    
+Mon 17 Feb 2025 04:48:10 INFO test result: 
+recall@5: 0.0369    recall@10: 0.0603    recall@20: 0.0917    recall@50: 0.1534    ndcg@5: 0.0246    ndcg@10: 0.0323    ndcg@20: 0.0404    ndcg@50: 0.0529    precision@5: 0.0081    precision@10: 0.0066    precision@20: 0.0051    precision@50: 0.0034    map@5: 0.0200    map@10: 0.0231    map@20: 0.0252    map@50: 0.0272    
+Mon 17 Feb 2025 04:48:14 INFO epoch 245 training [time: 3.75s, train loss: 0.6501]
+Mon 17 Feb 2025 04:48:14 INFO epoch 245 training [time: 3.75s, train loss: 0.4389]
+Mon 17 Feb 2025 04:48:18 INFO epoch 246 training [time: 3.76s, train loss: 0.6482]
+Mon 17 Feb 2025 04:48:18 INFO epoch 246 training [time: 3.76s, train loss: 0.4229]
+Mon 17 Feb 2025 04:48:22 INFO epoch 247 training [time: 3.80s, train loss: 0.6492]
+Mon 17 Feb 2025 04:48:22 INFO epoch 247 training [time: 3.80s, train loss: 0.4200]
+Mon 17 Feb 2025 04:48:25 INFO epoch 248 training [time: 3.83s, train loss: 0.6351]
+Mon 17 Feb 2025 04:48:25 INFO epoch 248 training [time: 3.83s, train loss: 0.4027]
+Mon 17 Feb 2025 04:48:29 INFO epoch 249 training [time: 3.75s, train loss: 0.6429]
+Mon 17 Feb 2025 04:48:29 INFO epoch 249 training [time: 3.75s, train loss: 0.4228]
+Mon 17 Feb 2025 04:48:35 INFO epoch 249 evaluating [time: 3.16s, valid_score: 0.089200]
+Mon 17 Feb 2025 04:48:35 INFO valid result: 
+recall@5: 0.0373    recall@10: 0.0584    recall@20: 0.0892    recall@50: 0.1482    ndcg@5: 0.0249    ndcg@10: 0.0317    ndcg@20: 0.0395    ndcg@50: 0.0513    precision@5: 0.0079    precision@10: 0.0062    precision@20: 0.0047    precision@50: 0.0031    map@5: 0.0204    map@10: 0.0232    map@20: 0.0253    map@50: 0.0271    
+Mon 17 Feb 2025 04:48:35 INFO test result: 
+recall@5: 0.0368    recall@10: 0.0600    recall@20: 0.0920    recall@50: 0.1516    ndcg@5: 0.0245    ndcg@10: 0.0321    ndcg@20: 0.0403    ndcg@50: 0.0524    precision@5: 0.0081    precision@10: 0.0066    precision@20: 0.0051    precision@50: 0.0034    map@5: 0.0198    map@10: 0.0229    map@20: 0.0251    map@50: 0.0270    
+Mon 17 Feb 2025 04:48:39 INFO epoch 250 training [time: 3.83s, train loss: 0.6563]
+Mon 17 Feb 2025 04:48:39 INFO epoch 250 training [time: 3.83s, train loss: 0.4094]
+Mon 17 Feb 2025 04:48:43 INFO epoch 251 training [time: 3.82s, train loss: 0.6462]
+Mon 17 Feb 2025 04:48:43 INFO epoch 251 training [time: 3.82s, train loss: 0.4285]
+Mon 17 Feb 2025 04:48:47 INFO epoch 252 training [time: 3.74s, train loss: 0.6553]
+Mon 17 Feb 2025 04:48:47 INFO epoch 252 training [time: 3.74s, train loss: 0.4209]
+Mon 17 Feb 2025 04:48:51 INFO epoch 253 training [time: 3.77s, train loss: 0.6320]
+Mon 17 Feb 2025 04:48:51 INFO epoch 253 training [time: 3.77s, train loss: 0.4194]
+Mon 17 Feb 2025 04:48:54 INFO epoch 254 training [time: 3.76s, train loss: 0.6530]
+Mon 17 Feb 2025 04:48:54 INFO epoch 254 training [time: 3.76s, train loss: 0.3861]
+Mon 17 Feb 2025 04:49:01 INFO epoch 254 evaluating [time: 3.17s, valid_score: 0.088000]
+Mon 17 Feb 2025 04:49:01 INFO valid result: 
+recall@5: 0.0364    recall@10: 0.0576    recall@20: 0.0880    recall@50: 0.1482    ndcg@5: 0.0247    ndcg@10: 0.0316    ndcg@20: 0.0394    ndcg@50: 0.0514    precision@5: 0.0077    precision@10: 0.0061    precision@20: 0.0047    precision@50: 0.0031    map@5: 0.0205    map@10: 0.0233    map@20: 0.0254    map@50: 0.0274    
+Mon 17 Feb 2025 04:49:01 INFO test result: 
+recall@5: 0.0375    recall@10: 0.0597    recall@20: 0.0917    recall@50: 0.1511    ndcg@5: 0.0249    ndcg@10: 0.0322    ndcg@20: 0.0405    ndcg@50: 0.0525    precision@5: 0.0082    precision@10: 0.0066    precision@20: 0.0051    precision@50: 0.0034    map@5: 0.0201    map@10: 0.0230    map@20: 0.0253    map@50: 0.0272    
+Mon 17 Feb 2025 04:49:04 INFO epoch 255 training [time: 3.73s, train loss: 0.6411]
+Mon 17 Feb 2025 04:49:04 INFO epoch 255 training [time: 3.73s, train loss: 0.4073]
+Mon 17 Feb 2025 04:49:08 INFO epoch 256 training [time: 3.83s, train loss: 0.6317]
+Mon 17 Feb 2025 04:49:08 INFO epoch 256 training [time: 3.83s, train loss: 0.3995]
+Mon 17 Feb 2025 04:49:12 INFO epoch 257 training [time: 3.71s, train loss: 0.6284]
+Mon 17 Feb 2025 04:49:12 INFO epoch 257 training [time: 3.71s, train loss: 0.4004]
+Mon 17 Feb 2025 04:49:16 INFO epoch 258 training [time: 3.77s, train loss: 0.6170]
+Mon 17 Feb 2025 04:49:16 INFO epoch 258 training [time: 3.77s, train loss: 0.3840]
+Mon 17 Feb 2025 04:49:20 INFO epoch 259 training [time: 3.75s, train loss: 0.6543]
+Mon 17 Feb 2025 04:49:20 INFO epoch 259 training [time: 3.75s, train loss: 0.3914]
+Mon 17 Feb 2025 04:49:26 INFO epoch 259 evaluating [time: 3.19s, valid_score: 0.088300]
+Mon 17 Feb 2025 04:49:26 INFO valid result: 
+recall@5: 0.0362    recall@10: 0.0584    recall@20: 0.0883    recall@50: 0.1475    ndcg@5: 0.0245    ndcg@10: 0.0318    ndcg@20: 0.0393    ndcg@50: 0.0511    precision@5: 0.0077    precision@10: 0.0062    precision@20: 0.0047    precision@50: 0.0031    map@5: 0.0204    map@10: 0.0233    map@20: 0.0253    map@50: 0.0272    
+Mon 17 Feb 2025 04:49:26 INFO test result: 
+recall@5: 0.0377    recall@10: 0.0600    recall@20: 0.0922    recall@50: 0.1514    ndcg@5: 0.0248    ndcg@10: 0.0321    ndcg@20: 0.0404    ndcg@50: 0.0523    precision@5: 0.0083    precision@10: 0.0066    precision@20: 0.0051    precision@50: 0.0034    map@5: 0.0198    map@10: 0.0228    map@20: 0.0250    map@50: 0.0269    
+Mon 17 Feb 2025 04:49:30 INFO epoch 260 training [time: 3.78s, train loss: 0.6358]
+Mon 17 Feb 2025 04:49:30 INFO epoch 260 training [time: 3.78s, train loss: 0.3880]
+Mon 17 Feb 2025 04:49:33 INFO epoch 261 training [time: 3.77s, train loss: 0.6172]
+Mon 17 Feb 2025 04:49:33 INFO epoch 261 training [time: 3.77s, train loss: 0.3952]
+Mon 17 Feb 2025 04:49:37 INFO epoch 262 training [time: 3.75s, train loss: 0.6116]
+Mon 17 Feb 2025 04:49:37 INFO epoch 262 training [time: 3.75s, train loss: 0.3601]
+Mon 17 Feb 2025 04:49:41 INFO epoch 263 training [time: 3.81s, train loss: 0.5952]
+Mon 17 Feb 2025 04:49:41 INFO epoch 263 training [time: 3.81s, train loss: 0.3819]
+Mon 17 Feb 2025 04:49:45 INFO epoch 264 training [time: 3.78s, train loss: 0.6020]
+Mon 17 Feb 2025 04:49:45 INFO epoch 264 training [time: 3.78s, train loss: 0.3688]
+Mon 17 Feb 2025 04:49:51 INFO epoch 264 evaluating [time: 3.15s, valid_score: 0.088500]
+Mon 17 Feb 2025 04:49:51 INFO valid result: 
+recall@5: 0.0368    recall@10: 0.0581    recall@20: 0.0885    recall@50: 0.1466    ndcg@5: 0.0245    ndcg@10: 0.0314    ndcg@20: 0.0391    ndcg@50: 0.0508    precision@5: 0.0078    precision@10: 0.0062    precision@20: 0.0047    precision@50: 0.0031    map@5: 0.0202    map@10: 0.0229    map@20: 0.0250    map@50: 0.0268    
+Mon 17 Feb 2025 04:49:51 INFO test result: 
+recall@5: 0.0374    recall@10: 0.0599    recall@20: 0.0922    recall@50: 0.1512    ndcg@5: 0.0248    ndcg@10: 0.0322    ndcg@20: 0.0405    ndcg@50: 0.0524    precision@5: 0.0082    precision@10: 0.0066    precision@20: 0.0051    precision@50: 0.0034    map@5: 0.0200    map@10: 0.0230    map@20: 0.0252    map@50: 0.0270    
+Mon 17 Feb 2025 04:49:55 INFO epoch 265 training [time: 3.84s, train loss: 0.6139]
+Mon 17 Feb 2025 04:49:55 INFO epoch 265 training [time: 3.84s, train loss: 0.3657]
+Mon 17 Feb 2025 04:49:59 INFO epoch 266 training [time: 3.79s, train loss: 0.5968]
+Mon 17 Feb 2025 04:49:59 INFO epoch 266 training [time: 3.79s, train loss: 0.3920]
+Mon 17 Feb 2025 04:50:03 INFO epoch 267 training [time: 3.77s, train loss: 0.6151]
+Mon 17 Feb 2025 04:50:03 INFO epoch 267 training [time: 3.77s, train loss: 0.3758]
+Mon 17 Feb 2025 04:50:06 INFO epoch 268 training [time: 3.75s, train loss: 0.5957]
+Mon 17 Feb 2025 04:50:06 INFO epoch 268 training [time: 3.75s, train loss: 0.3735]
+Mon 17 Feb 2025 04:50:10 INFO epoch 269 training [time: 3.79s, train loss: 0.5827]
+Mon 17 Feb 2025 04:50:10 INFO epoch 269 training [time: 3.79s, train loss: 0.3491]
+Mon 17 Feb 2025 04:50:16 INFO epoch 269 evaluating [time: 3.23s, valid_score: 0.088200]
+Mon 17 Feb 2025 04:50:16 INFO valid result: 
+recall@5: 0.0370    recall@10: 0.0580    recall@20: 0.0882    recall@50: 0.1470    ndcg@5: 0.0246    ndcg@10: 0.0314    ndcg@20: 0.0391    ndcg@50: 0.0509    precision@5: 0.0078    precision@10: 0.0061    precision@20: 0.0047    precision@50: 0.0031    map@5: 0.0202    map@10: 0.0230    map@20: 0.0250    map@50: 0.0269    
+Mon 17 Feb 2025 04:50:16 INFO test result: 
+recall@5: 0.0374    recall@10: 0.0596    recall@20: 0.0918    recall@50: 0.1501    ndcg@5: 0.0247    ndcg@10: 0.0319    ndcg@20: 0.0402    ndcg@50: 0.0521    precision@5: 0.0082    precision@10: 0.0066    precision@20: 0.0051    precision@50: 0.0034    map@5: 0.0198    map@10: 0.0227    map@20: 0.0250    map@50: 0.0268    
+Mon 17 Feb 2025 04:50:20 INFO epoch 270 training [time: 3.87s, train loss: 0.5933]
+Mon 17 Feb 2025 04:50:20 INFO epoch 270 training [time: 3.87s, train loss: 0.3554]
+Mon 17 Feb 2025 04:50:24 INFO epoch 271 training [time: 3.82s, train loss: 0.5904]
+Mon 17 Feb 2025 04:50:24 INFO epoch 271 training [time: 3.82s, train loss: 0.3567]
+Mon 17 Feb 2025 04:50:28 INFO epoch 272 training [time: 3.85s, train loss: 0.6046]
+Mon 17 Feb 2025 04:50:28 INFO epoch 272 training [time: 3.85s, train loss: 0.3725]
+Mon 17 Feb 2025 04:50:32 INFO epoch 273 training [time: 3.76s, train loss: 0.6039]
+Mon 17 Feb 2025 04:50:32 INFO epoch 273 training [time: 3.76s, train loss: 0.3459]
+Mon 17 Feb 2025 04:50:36 INFO epoch 274 training [time: 3.79s, train loss: 0.5777]
+Mon 17 Feb 2025 04:50:36 INFO epoch 274 training [time: 3.79s, train loss: 0.3722]
+Mon 17 Feb 2025 04:50:42 INFO epoch 274 evaluating [time: 3.15s, valid_score: 0.087900]
+Mon 17 Feb 2025 04:50:42 INFO valid result: 
+recall@5: 0.0368    recall@10: 0.0582    recall@20: 0.0879    recall@50: 0.1468    ndcg@5: 0.0246    ndcg@10: 0.0316    ndcg@20: 0.0391    ndcg@50: 0.0510    precision@5: 0.0078    precision@10: 0.0062    precision@20: 0.0047    precision@50: 0.0031    map@5: 0.0203    map@10: 0.0231    map@20: 0.0251    map@50: 0.0270    
+Mon 17 Feb 2025 04:50:42 INFO test result: 
+recall@5: 0.0378    recall@10: 0.0591    recall@20: 0.0912    recall@50: 0.1515    ndcg@5: 0.0249    ndcg@10: 0.0319    ndcg@20: 0.0402    ndcg@50: 0.0524    precision@5: 0.0083    precision@10: 0.0065    precision@20: 0.0050    precision@50: 0.0034    map@5: 0.0200    map@10: 0.0228    map@20: 0.0251    map@50: 0.0270    
+Mon 17 Feb 2025 04:50:46 INFO epoch 275 training [time: 3.82s, train loss: 0.6140]
+Mon 17 Feb 2025 04:50:46 INFO epoch 275 training [time: 3.82s, train loss: 0.3384]
+Mon 17 Feb 2025 04:50:49 INFO epoch 276 training [time: 3.77s, train loss: 0.5607]
+Mon 17 Feb 2025 04:50:49 INFO epoch 276 training [time: 3.77s, train loss: 0.3726]
+Mon 17 Feb 2025 04:50:53 INFO epoch 277 training [time: 3.82s, train loss: 0.5857]
+Mon 17 Feb 2025 04:50:53 INFO epoch 277 training [time: 3.82s, train loss: 0.3529]
+Mon 17 Feb 2025 04:50:57 INFO epoch 278 training [time: 3.78s, train loss: 0.5852]
+Mon 17 Feb 2025 04:50:57 INFO epoch 278 training [time: 3.78s, train loss: 0.3542]
+Mon 17 Feb 2025 04:51:01 INFO epoch 279 training [time: 3.83s, train loss: 0.5596]
+Mon 17 Feb 2025 04:51:01 INFO epoch 279 training [time: 3.83s, train loss: 0.3496]
+Mon 17 Feb 2025 04:51:07 INFO epoch 279 evaluating [time: 3.16s, valid_score: 0.087800]
+Mon 17 Feb 2025 04:51:07 INFO valid result: 
+recall@5: 0.0368    recall@10: 0.0581    recall@20: 0.0878    recall@50: 0.1467    ndcg@5: 0.0247    ndcg@10: 0.0316    ndcg@20: 0.0392    ndcg@50: 0.0510    precision@5: 0.0078    precision@10: 0.0061    precision@20: 0.0047    precision@50: 0.0031    map@5: 0.0203    map@10: 0.0232    map@20: 0.0252    map@50: 0.0271    
+Mon 17 Feb 2025 04:51:07 INFO test result: 
+recall@5: 0.0375    recall@10: 0.0589    recall@20: 0.0908    recall@50: 0.1494    ndcg@5: 0.0246    ndcg@10: 0.0317    ndcg@20: 0.0399    ndcg@50: 0.0518    precision@5: 0.0082    precision@10: 0.0065    precision@20: 0.0050    precision@50: 0.0033    map@5: 0.0198    map@10: 0.0226    map@20: 0.0248    map@50: 0.0267    
+Mon 17 Feb 2025 04:51:11 INFO epoch 280 training [time: 3.96s, train loss: 0.5860]
+Mon 17 Feb 2025 04:51:11 INFO epoch 280 training [time: 3.96s, train loss: 0.3418]
+Mon 17 Feb 2025 04:51:15 INFO epoch 281 training [time: 3.82s, train loss: 0.5784]
+Mon 17 Feb 2025 04:51:15 INFO epoch 281 training [time: 3.82s, train loss: 0.3320]
+Mon 17 Feb 2025 04:51:19 INFO epoch 282 training [time: 3.94s, train loss: 0.5638]
+Mon 17 Feb 2025 04:51:19 INFO epoch 282 training [time: 3.94s, train loss: 0.3280]
+Mon 17 Feb 2025 04:51:23 INFO epoch 283 training [time: 3.85s, train loss: 0.5619]
+Mon 17 Feb 2025 04:51:23 INFO epoch 283 training [time: 3.85s, train loss: 0.3412]
+Mon 17 Feb 2025 04:51:27 INFO epoch 284 training [time: 3.75s, train loss: 0.5546]
+Mon 17 Feb 2025 04:51:27 INFO epoch 284 training [time: 3.75s, train loss: 0.3340]
+Mon 17 Feb 2025 04:51:33 INFO epoch 284 evaluating [time: 3.18s, valid_score: 0.087700]
+Mon 17 Feb 2025 04:51:33 INFO valid result: 
+recall@5: 0.0369    recall@10: 0.0577    recall@20: 0.0877    recall@50: 0.1465    ndcg@5: 0.0246    ndcg@10: 0.0314    ndcg@20: 0.0390    ndcg@50: 0.0508    precision@5: 0.0078    precision@10: 0.0061    precision@20: 0.0047    precision@50: 0.0031    map@5: 0.0203    map@10: 0.0230    map@20: 0.0251    map@50: 0.0269    
+Mon 17 Feb 2025 04:51:33 INFO test result: 
+recall@5: 0.0372    recall@10: 0.0597    recall@20: 0.0914    recall@50: 0.1500    ndcg@5: 0.0245    ndcg@10: 0.0318    ndcg@20: 0.0400    ndcg@50: 0.0518    precision@5: 0.0082    precision@10: 0.0066    precision@20: 0.0050    precision@50: 0.0034    map@5: 0.0196    map@10: 0.0226    map@20: 0.0247    map@50: 0.0266    
+Mon 17 Feb 2025 04:51:37 INFO epoch 285 training [time: 3.77s, train loss: 0.5555]
+Mon 17 Feb 2025 04:51:37 INFO epoch 285 training [time: 3.77s, train loss: 0.3199]
+Mon 17 Feb 2025 04:51:40 INFO epoch 286 training [time: 3.67s, train loss: 0.5578]
+Mon 17 Feb 2025 04:51:40 INFO epoch 286 training [time: 3.67s, train loss: 0.3565]
+Mon 17 Feb 2025 04:51:44 INFO epoch 287 training [time: 3.81s, train loss: 0.5706]
+Mon 17 Feb 2025 04:51:44 INFO epoch 287 training [time: 3.81s, train loss: 0.3192]
+Mon 17 Feb 2025 04:51:48 INFO epoch 288 training [time: 3.79s, train loss: 0.5580]
+Mon 17 Feb 2025 04:51:48 INFO epoch 288 training [time: 3.79s, train loss: 0.3361]
+Mon 17 Feb 2025 04:51:52 INFO epoch 289 training [time: 3.81s, train loss: 0.5613]
+Mon 17 Feb 2025 04:51:52 INFO epoch 289 training [time: 3.81s, train loss: 0.3321]
+Mon 17 Feb 2025 04:51:58 INFO epoch 289 evaluating [time: 3.18s, valid_score: 0.088200]
+Mon 17 Feb 2025 04:51:58 INFO valid result: 
+recall@5: 0.0371    recall@10: 0.0575    recall@20: 0.0882    recall@50: 0.1467    ndcg@5: 0.0248    ndcg@10: 0.0315    ndcg@20: 0.0393    ndcg@50: 0.0510    precision@5: 0.0078    precision@10: 0.0061    precision@20: 0.0047    precision@50: 0.0031    map@5: 0.0204    map@10: 0.0232    map@20: 0.0252    map@50: 0.0271    
+Mon 17 Feb 2025 04:51:58 INFO test result: 
+recall@5: 0.0376    recall@10: 0.0596    recall@20: 0.0915    recall@50: 0.1500    ndcg@5: 0.0246    ndcg@10: 0.0318    ndcg@20: 0.0400    ndcg@50: 0.0519    precision@5: 0.0082    precision@10: 0.0066    precision@20: 0.0051    precision@50: 0.0034    map@5: 0.0197    map@10: 0.0226    map@20: 0.0248    map@50: 0.0266    
+Mon 17 Feb 2025 04:52:02 INFO epoch 290 training [time: 3.73s, train loss: 0.5721]
+Mon 17 Feb 2025 04:52:02 INFO epoch 290 training [time: 3.73s, train loss: 0.3322]
+Mon 17 Feb 2025 04:52:06 INFO epoch 291 training [time: 3.75s, train loss: 0.5417]
+Mon 17 Feb 2025 04:52:06 INFO epoch 291 training [time: 3.75s, train loss: 0.3181]
+Mon 17 Feb 2025 04:52:10 INFO epoch 292 training [time: 3.88s, train loss: 0.5437]
+Mon 17 Feb 2025 04:52:10 INFO epoch 292 training [time: 3.88s, train loss: 0.3227]
+Mon 17 Feb 2025 04:52:13 INFO epoch 293 training [time: 3.87s, train loss: 0.5252]
+Mon 17 Feb 2025 04:52:13 INFO epoch 293 training [time: 3.87s, train loss: 0.3143]
+Mon 17 Feb 2025 04:52:17 INFO epoch 294 training [time: 3.85s, train loss: 0.5381]
+Mon 17 Feb 2025 04:52:17 INFO epoch 294 training [time: 3.85s, train loss: 0.3006]
+Mon 17 Feb 2025 04:52:24 INFO epoch 294 evaluating [time: 3.25s, valid_score: 0.087600]
+Mon 17 Feb 2025 04:52:24 INFO valid result: 
+recall@5: 0.0369    recall@10: 0.0579    recall@20: 0.0876    recall@50: 0.1465    ndcg@5: 0.0248    ndcg@10: 0.0316    ndcg@20: 0.0392    ndcg@50: 0.0509    precision@5: 0.0078    precision@10: 0.0061    precision@20: 0.0047    precision@50: 0.0031    map@5: 0.0205    map@10: 0.0232    map@20: 0.0252    map@50: 0.0271    
+Mon 17 Feb 2025 04:52:24 INFO test result: 
+recall@5: 0.0373    recall@10: 0.0592    recall@20: 0.0906    recall@50: 0.1490    ndcg@5: 0.0245    ndcg@10: 0.0317    ndcg@20: 0.0398    ndcg@50: 0.0517    precision@5: 0.0082    precision@10: 0.0065    precision@20: 0.0050    precision@50: 0.0033    map@5: 0.0197    map@10: 0.0225    map@20: 0.0247    map@50: 0.0266    
+Mon 17 Feb 2025 04:52:27 INFO epoch 295 training [time: 3.75s, train loss: 0.5361]
+Mon 17 Feb 2025 04:52:27 INFO epoch 295 training [time: 3.75s, train loss: 0.2935]
+Mon 17 Feb 2025 04:52:31 INFO epoch 296 training [time: 3.80s, train loss: 0.5544]
+Mon 17 Feb 2025 04:52:31 INFO epoch 296 training [time: 3.80s, train loss: 0.3049]
+Mon 17 Feb 2025 04:52:35 INFO epoch 297 training [time: 3.81s, train loss: 0.5457]
+Mon 17 Feb 2025 04:52:35 INFO epoch 297 training [time: 3.81s, train loss: 0.3202]
+Mon 17 Feb 2025 04:52:39 INFO epoch 298 training [time: 3.80s, train loss: 0.5501]
+Mon 17 Feb 2025 04:52:39 INFO epoch 298 training [time: 3.80s, train loss: 0.2963]
+Mon 17 Feb 2025 04:52:43 INFO epoch 299 training [time: 3.76s, train loss: 0.5373]
+Mon 17 Feb 2025 04:52:43 INFO epoch 299 training [time: 3.76s, train loss: 0.3103]
+Mon 17 Feb 2025 04:52:49 INFO epoch 299 evaluating [time: 3.20s, valid_score: 0.087800]
+Mon 17 Feb 2025 04:52:49 INFO valid result: 
+recall@5: 0.0379    recall@10: 0.0583    recall@20: 0.0878    recall@50: 0.1456    ndcg@5: 0.0250    ndcg@10: 0.0316    ndcg@20: 0.0391    ndcg@50: 0.0506    precision@5: 0.0080    precision@10: 0.0062    precision@20: 0.0047    precision@50: 0.0031    map@5: 0.0204    map@10: 0.0230    map@20: 0.0250    map@50: 0.0268    
+Mon 17 Feb 2025 04:52:49 INFO test result: 
+recall@5: 0.0373    recall@10: 0.0594    recall@20: 0.0911    recall@50: 0.1486    ndcg@5: 0.0244    ndcg@10: 0.0317    ndcg@20: 0.0398    ndcg@50: 0.0515    precision@5: 0.0082    precision@10: 0.0066    precision@20: 0.0050    precision@50: 0.0033    map@5: 0.0196    map@10: 0.0225    map@20: 0.0246    map@50: 0.0265    
+Mon 17 Feb 2025 04:52:53 INFO epoch 300 training [time: 3.74s, train loss: 0.5238]
+Mon 17 Feb 2025 04:52:53 INFO epoch 300 training [time: 3.74s, train loss: 0.2928]
+Mon 17 Feb 2025 04:52:57 INFO epoch 301 training [time: 3.83s, train loss: 0.5302]
+Mon 17 Feb 2025 04:52:57 INFO epoch 301 training [time: 3.83s, train loss: 0.3075]
+Mon 17 Feb 2025 04:53:00 INFO epoch 302 training [time: 3.79s, train loss: 0.5275]
+Mon 17 Feb 2025 04:53:00 INFO epoch 302 training [time: 3.79s, train loss: 0.3008]
+Mon 17 Feb 2025 04:53:04 INFO epoch 303 training [time: 3.76s, train loss: 0.5241]
+Mon 17 Feb 2025 04:53:04 INFO epoch 303 training [time: 3.76s, train loss: 0.2968]
+Mon 17 Feb 2025 04:53:08 INFO epoch 304 training [time: 3.76s, train loss: 0.5254]
+Mon 17 Feb 2025 04:53:08 INFO epoch 304 training [time: 3.76s, train loss: 0.2816]
+Mon 17 Feb 2025 04:53:14 INFO epoch 304 evaluating [time: 3.20s, valid_score: 0.087300]
+Mon 17 Feb 2025 04:53:14 INFO valid result: 
+recall@5: 0.0371    recall@10: 0.0577    recall@20: 0.0873    recall@50: 0.1462    ndcg@5: 0.0245    ndcg@10: 0.0313    ndcg@20: 0.0388    ndcg@50: 0.0505    precision@5: 0.0078    precision@10: 0.0061    precision@20: 0.0046    precision@50: 0.0031    map@5: 0.0201    map@10: 0.0228    map@20: 0.0249    map@50: 0.0267    
+Mon 17 Feb 2025 04:53:14 INFO test result: 
+recall@5: 0.0373    recall@10: 0.0589    recall@20: 0.0906    recall@50: 0.1481    ndcg@5: 0.0247    ndcg@10: 0.0317    ndcg@20: 0.0399    ndcg@50: 0.0516    precision@5: 0.0082    precision@10: 0.0065    precision@20: 0.0050    precision@50: 0.0033    map@5: 0.0198    map@10: 0.0227    map@20: 0.0249    map@50: 0.0267    
+Mon 17 Feb 2025 04:53:18 INFO epoch 305 training [time: 3.80s, train loss: 0.5263]
+Mon 17 Feb 2025 04:53:18 INFO epoch 305 training [time: 3.80s, train loss: 0.3039]
+Mon 17 Feb 2025 04:53:22 INFO epoch 306 training [time: 3.83s, train loss: 0.5240]
+Mon 17 Feb 2025 04:53:22 INFO epoch 306 training [time: 3.83s, train loss: 0.2982]
+Mon 17 Feb 2025 04:53:26 INFO epoch 307 training [time: 3.79s, train loss: 0.5212]
+Mon 17 Feb 2025 04:53:26 INFO epoch 307 training [time: 3.79s, train loss: 0.2842]
+Mon 17 Feb 2025 04:53:29 INFO epoch 308 training [time: 3.77s, train loss: 0.5241]
+Mon 17 Feb 2025 04:53:29 INFO epoch 308 training [time: 3.77s, train loss: 0.2906]
+Mon 17 Feb 2025 04:53:33 INFO epoch 309 training [time: 3.69s, train loss: 0.5153]
+Mon 17 Feb 2025 04:53:33 INFO epoch 309 training [time: 3.69s, train loss: 0.2890]
+Mon 17 Feb 2025 04:53:39 INFO epoch 309 evaluating [time: 3.13s, valid_score: 0.086800]
+Mon 17 Feb 2025 04:53:39 INFO valid result: 
+recall@5: 0.0368    recall@10: 0.0573    recall@20: 0.0868    recall@50: 0.1450    ndcg@5: 0.0245    ndcg@10: 0.0312    ndcg@20: 0.0387    ndcg@50: 0.0504    precision@5: 0.0077    precision@10: 0.0061    precision@20: 0.0046    precision@50: 0.0031    map@5: 0.0201    map@10: 0.0229    map@20: 0.0249    map@50: 0.0267    
+Mon 17 Feb 2025 04:53:39 INFO test result: 
+recall@5: 0.0370    recall@10: 0.0590    recall@20: 0.0903    recall@50: 0.1493    ndcg@5: 0.0244    ndcg@10: 0.0316    ndcg@20: 0.0397    ndcg@50: 0.0516    precision@5: 0.0081    precision@10: 0.0065    precision@20: 0.0050    precision@50: 0.0033    map@5: 0.0196    map@10: 0.0225    map@20: 0.0246    map@50: 0.0265    
+Mon 17 Feb 2025 04:53:43 INFO epoch 310 training [time: 3.68s, train loss: 0.5215]
+Mon 17 Feb 2025 04:53:43 INFO epoch 310 training [time: 3.68s, train loss: 0.2827]
+Mon 17 Feb 2025 04:53:47 INFO epoch 311 training [time: 3.60s, train loss: 0.5050]
+Mon 17 Feb 2025 04:53:47 INFO epoch 311 training [time: 3.60s, train loss: 0.2895]
+Mon 17 Feb 2025 04:53:51 INFO epoch 312 training [time: 3.84s, train loss: 0.4959]
+Mon 17 Feb 2025 04:53:51 INFO epoch 312 training [time: 3.84s, train loss: 0.3001]
+Mon 17 Feb 2025 04:53:54 INFO epoch 313 training [time: 3.77s, train loss: 0.4862]
+Mon 17 Feb 2025 04:53:54 INFO epoch 313 training [time: 3.77s, train loss: 0.2823]
+Mon 17 Feb 2025 04:53:58 INFO epoch 314 training [time: 3.84s, train loss: 0.4985]
+Mon 17 Feb 2025 04:53:58 INFO epoch 314 training [time: 3.84s, train loss: 0.2709]
+Mon 17 Feb 2025 04:54:05 INFO epoch 314 evaluating [time: 3.21s, valid_score: 0.086600]
+Mon 17 Feb 2025 04:54:05 INFO valid result: 
+recall@5: 0.0368    recall@10: 0.0571    recall@20: 0.0866    recall@50: 0.1460    ndcg@5: 0.0244    ndcg@10: 0.0310    ndcg@20: 0.0385    ndcg@50: 0.0504    precision@5: 0.0078    precision@10: 0.0061    precision@20: 0.0046    precision@50: 0.0031    map@5: 0.0200    map@10: 0.0227    map@20: 0.0247    map@50: 0.0266    
+Mon 17 Feb 2025 04:54:05 INFO test result: 
+recall@5: 0.0373    recall@10: 0.0592    recall@20: 0.0902    recall@50: 0.1492    ndcg@5: 0.0245    ndcg@10: 0.0317    ndcg@20: 0.0397    ndcg@50: 0.0516    precision@5: 0.0082    precision@10: 0.0065    precision@20: 0.0050    precision@50: 0.0033    map@5: 0.0196    map@10: 0.0225    map@20: 0.0246    map@50: 0.0265    
+Mon 17 Feb 2025 04:54:08 INFO epoch 315 training [time: 3.82s, train loss: 0.5014]
+Mon 17 Feb 2025 04:54:08 INFO epoch 315 training [time: 3.82s, train loss: 0.2655]
+Mon 17 Feb 2025 04:54:12 INFO epoch 316 training [time: 3.83s, train loss: 0.4972]
+Mon 17 Feb 2025 04:54:12 INFO epoch 316 training [time: 3.83s, train loss: 0.2889]
+Mon 17 Feb 2025 04:54:16 INFO epoch 317 training [time: 3.81s, train loss: 0.4927]
+Mon 17 Feb 2025 04:54:16 INFO epoch 317 training [time: 3.81s, train loss: 0.2874]
+Mon 17 Feb 2025 04:54:20 INFO epoch 318 training [time: 3.77s, train loss: 0.4876]
+Mon 17 Feb 2025 04:54:20 INFO epoch 318 training [time: 3.77s, train loss: 0.2696]
+Mon 17 Feb 2025 04:54:24 INFO epoch 319 training [time: 3.73s, train loss: 0.4962]
+Mon 17 Feb 2025 04:54:24 INFO epoch 319 training [time: 3.73s, train loss: 0.2689]
+Mon 17 Feb 2025 04:54:30 INFO epoch 319 evaluating [time: 3.19s, valid_score: 0.086600]
+Mon 17 Feb 2025 04:54:30 INFO valid result: 
+recall@5: 0.0365    recall@10: 0.0573    recall@20: 0.0866    recall@50: 0.1456    ndcg@5: 0.0243    ndcg@10: 0.0311    ndcg@20: 0.0386    ndcg@50: 0.0503    precision@5: 0.0077    precision@10: 0.0061    precision@20: 0.0046    precision@50: 0.0031    map@5: 0.0200    map@10: 0.0227    map@20: 0.0248    map@50: 0.0266    
+Mon 17 Feb 2025 04:54:30 INFO test result: 
+recall@5: 0.0369    recall@10: 0.0596    recall@20: 0.0896    recall@50: 0.1481    ndcg@5: 0.0245    ndcg@10: 0.0319    ndcg@20: 0.0396    ndcg@50: 0.0514    precision@5: 0.0081    precision@10: 0.0066    precision@20: 0.0050    precision@50: 0.0033    map@5: 0.0197    map@10: 0.0227    map@20: 0.0248    map@50: 0.0266    
+Mon 17 Feb 2025 04:54:34 INFO epoch 320 training [time: 3.76s, train loss: 0.4911]
+Mon 17 Feb 2025 04:54:34 INFO epoch 320 training [time: 3.76s, train loss: 0.2730]
+Mon 17 Feb 2025 04:54:37 INFO epoch 321 training [time: 3.80s, train loss: 0.4925]
+Mon 17 Feb 2025 04:54:37 INFO epoch 321 training [time: 3.80s, train loss: 0.2755]
+Mon 17 Feb 2025 04:54:41 INFO epoch 322 training [time: 3.86s, train loss: 0.4749]
+Mon 17 Feb 2025 04:54:41 INFO epoch 322 training [time: 3.86s, train loss: 0.2690]
+Mon 17 Feb 2025 04:54:45 INFO epoch 323 training [time: 3.66s, train loss: 0.4860]
+Mon 17 Feb 2025 04:54:45 INFO epoch 323 training [time: 3.66s, train loss: 0.2812]
+Mon 17 Feb 2025 04:54:49 INFO epoch 324 training [time: 3.83s, train loss: 0.4889]
+Mon 17 Feb 2025 04:54:49 INFO epoch 324 training [time: 3.83s, train loss: 0.2659]
+Mon 17 Feb 2025 04:54:55 INFO epoch 324 evaluating [time: 3.18s, valid_score: 0.086300]
+Mon 17 Feb 2025 04:54:55 INFO valid result: 
+recall@5: 0.0373    recall@10: 0.0572    recall@20: 0.0863    recall@50: 0.1448    ndcg@5: 0.0245    ndcg@10: 0.0310    ndcg@20: 0.0384    ndcg@50: 0.0501    precision@5: 0.0079    precision@10: 0.0061    precision@20: 0.0046    precision@50: 0.0031    map@5: 0.0200    map@10: 0.0227    map@20: 0.0247    map@50: 0.0265    
+Mon 17 Feb 2025 04:54:55 INFO test result: 
+recall@5: 0.0372    recall@10: 0.0591    recall@20: 0.0901    recall@50: 0.1474    ndcg@5: 0.0244    ndcg@10: 0.0316    ndcg@20: 0.0395    ndcg@50: 0.0511    precision@5: 0.0082    precision@10: 0.0065    precision@20: 0.0050    precision@50: 0.0033    map@5: 0.0196    map@10: 0.0224    map@20: 0.0246    map@50: 0.0264    
+Mon 17 Feb 2025 04:54:59 INFO epoch 325 training [time: 3.76s, train loss: 0.4775]
+Mon 17 Feb 2025 04:54:59 INFO epoch 325 training [time: 3.76s, train loss: 0.2615]
+Mon 17 Feb 2025 04:55:03 INFO epoch 326 training [time: 3.75s, train loss: 0.4888]
+Mon 17 Feb 2025 04:55:03 INFO epoch 326 training [time: 3.75s, train loss: 0.2691]
+Mon 17 Feb 2025 04:55:06 INFO epoch 327 training [time: 3.76s, train loss: 0.4817]
+Mon 17 Feb 2025 04:55:06 INFO epoch 327 training [time: 3.76s, train loss: 0.2486]
+Mon 17 Feb 2025 04:55:10 INFO epoch 328 training [time: 3.74s, train loss: 0.4743]
+Mon 17 Feb 2025 04:55:10 INFO epoch 328 training [time: 3.74s, train loss: 0.2556]
+Mon 17 Feb 2025 04:55:14 INFO epoch 329 training [time: 3.79s, train loss: 0.4909]
+Mon 17 Feb 2025 04:55:14 INFO epoch 329 training [time: 3.79s, train loss: 0.2631]
+Mon 17 Feb 2025 04:55:20 INFO epoch 329 evaluating [time: 3.25s, valid_score: 0.086300]
+Mon 17 Feb 2025 04:55:20 INFO valid result: 
+recall@5: 0.0365    recall@10: 0.0574    recall@20: 0.0863    recall@50: 0.1450    ndcg@5: 0.0241    ndcg@10: 0.0309    ndcg@20: 0.0382    ndcg@50: 0.0499    precision@5: 0.0077    precision@10: 0.0061    precision@20: 0.0046    precision@50: 0.0031    map@5: 0.0197    map@10: 0.0225    map@20: 0.0244    map@50: 0.0263    
+Mon 17 Feb 2025 04:55:20 INFO test result: 
+recall@5: 0.0366    recall@10: 0.0589    recall@20: 0.0896    recall@50: 0.1469    ndcg@5: 0.0243    ndcg@10: 0.0316    ndcg@20: 0.0395    ndcg@50: 0.0511    precision@5: 0.0080    precision@10: 0.0065    precision@20: 0.0049    precision@50: 0.0033    map@5: 0.0196    map@10: 0.0225    map@20: 0.0246    map@50: 0.0264    
+Mon 17 Feb 2025 04:55:24 INFO epoch 330 training [time: 3.80s, train loss: 0.4806]
+Mon 17 Feb 2025 04:55:24 INFO epoch 330 training [time: 3.80s, train loss: 0.2461]
+Mon 17 Feb 2025 04:55:28 INFO epoch 331 training [time: 3.80s, train loss: 0.4701]
+Mon 17 Feb 2025 04:55:28 INFO epoch 331 training [time: 3.80s, train loss: 0.2595]
+Mon 17 Feb 2025 04:55:32 INFO epoch 332 training [time: 3.65s, train loss: 0.4876]
+Mon 17 Feb 2025 04:55:32 INFO epoch 332 training [time: 3.65s, train loss: 0.2607]
+Mon 17 Feb 2025 04:55:35 INFO epoch 333 training [time: 3.80s, train loss: 0.4770]
+Mon 17 Feb 2025 04:55:35 INFO epoch 333 training [time: 3.80s, train loss: 0.2426]
+Mon 17 Feb 2025 04:55:39 INFO epoch 334 training [time: 3.79s, train loss: 0.4656]
+Mon 17 Feb 2025 04:55:39 INFO epoch 334 training [time: 3.79s, train loss: 0.2536]
+Mon 17 Feb 2025 04:55:45 INFO epoch 334 evaluating [time: 3.15s, valid_score: 0.086200]
+Mon 17 Feb 2025 04:55:45 INFO valid result: 
+recall@5: 0.0369    recall@10: 0.0578    recall@20: 0.0862    recall@50: 0.1445    ndcg@5: 0.0243    ndcg@10: 0.0311    ndcg@20: 0.0383    ndcg@50: 0.0499    precision@5: 0.0078    precision@10: 0.0061    precision@20: 0.0046    precision@50: 0.0031    map@5: 0.0198    map@10: 0.0226    map@20: 0.0245    map@50: 0.0263    
+Mon 17 Feb 2025 04:55:45 INFO test result: 
+recall@5: 0.0365    recall@10: 0.0593    recall@20: 0.0887    recall@50: 0.1464    ndcg@5: 0.0241    ndcg@10: 0.0316    ndcg@20: 0.0391    ndcg@50: 0.0508    precision@5: 0.0080    precision@10: 0.0065    precision@20: 0.0049    precision@50: 0.0033    map@5: 0.0195    map@10: 0.0224    map@20: 0.0244    map@50: 0.0263    
+Mon 17 Feb 2025 04:55:49 INFO epoch 335 training [time: 3.79s, train loss: 0.4658]
+Mon 17 Feb 2025 04:55:49 INFO epoch 335 training [time: 3.79s, train loss: 0.2565]
+Mon 17 Feb 2025 04:55:53 INFO epoch 336 training [time: 3.78s, train loss: 0.4829]
+Mon 17 Feb 2025 04:55:53 INFO epoch 336 training [time: 3.78s, train loss: 0.2451]
+Mon 17 Feb 2025 04:55:57 INFO epoch 337 training [time: 3.88s, train loss: 0.4569]
+Mon 17 Feb 2025 04:55:57 INFO epoch 337 training [time: 3.88s, train loss: 0.2560]
+Mon 17 Feb 2025 04:56:01 INFO epoch 338 training [time: 3.85s, train loss: 0.4620]
+Mon 17 Feb 2025 04:56:01 INFO epoch 338 training [time: 3.85s, train loss: 0.2694]
+Mon 17 Feb 2025 04:56:05 INFO epoch 339 training [time: 3.73s, train loss: 0.4760]
+Mon 17 Feb 2025 04:56:05 INFO epoch 339 training [time: 3.73s, train loss: 0.2369]
+Mon 17 Feb 2025 04:56:11 INFO epoch 339 evaluating [time: 3.17s, valid_score: 0.085200]
+Mon 17 Feb 2025 04:56:11 INFO valid result: 
+recall@5: 0.0369    recall@10: 0.0578    recall@20: 0.0852    recall@50: 0.1442    ndcg@5: 0.0243    ndcg@10: 0.0310    ndcg@20: 0.0380    ndcg@50: 0.0498    precision@5: 0.0078    precision@10: 0.0061    precision@20: 0.0045    precision@50: 0.0031    map@5: 0.0198    map@10: 0.0225    map@20: 0.0244    map@50: 0.0263    
+Mon 17 Feb 2025 04:56:11 INFO test result: 
+recall@5: 0.0363    recall@10: 0.0589    recall@20: 0.0886    recall@50: 0.1470    ndcg@5: 0.0239    ndcg@10: 0.0313    ndcg@20: 0.0389    ndcg@50: 0.0508    precision@5: 0.0080    precision@10: 0.0065    precision@20: 0.0049    precision@50: 0.0033    map@5: 0.0193    map@10: 0.0222    map@20: 0.0243    map@50: 0.0261    
+Mon 17 Feb 2025 04:56:15 INFO epoch 340 training [time: 3.82s, train loss: 0.4624]
+Mon 17 Feb 2025 04:56:15 INFO epoch 340 training [time: 3.82s, train loss: 0.2337]
+Mon 17 Feb 2025 04:56:19 INFO epoch 341 training [time: 3.86s, train loss: 0.4676]
+Mon 17 Feb 2025 04:56:19 INFO epoch 341 training [time: 3.86s, train loss: 0.2401]
+Mon 17 Feb 2025 04:56:22 INFO epoch 342 training [time: 3.87s, train loss: 0.4519]
+Mon 17 Feb 2025 04:56:22 INFO epoch 342 training [time: 3.87s, train loss: 0.2300]
+Mon 17 Feb 2025 04:56:26 INFO epoch 343 training [time: 3.85s, train loss: 0.4527]
+Mon 17 Feb 2025 04:56:26 INFO epoch 343 training [time: 3.85s, train loss: 0.2400]
+Mon 17 Feb 2025 04:56:30 INFO epoch 344 training [time: 3.75s, train loss: 0.4405]
+Mon 17 Feb 2025 04:56:30 INFO epoch 344 training [time: 3.75s, train loss: 0.2443]
+Mon 17 Feb 2025 04:56:36 INFO epoch 344 evaluating [time: 3.15s, valid_score: 0.085300]
+Mon 17 Feb 2025 04:56:36 INFO valid result: 
+recall@5: 0.0366    recall@10: 0.0575    recall@20: 0.0853    recall@50: 0.1436    ndcg@5: 0.0243    ndcg@10: 0.0311    ndcg@20: 0.0381    ndcg@50: 0.0498    precision@5: 0.0077    precision@10: 0.0061    precision@20: 0.0045    precision@50: 0.0030    map@5: 0.0199    map@10: 0.0226    map@20: 0.0245    map@50: 0.0264    
+Mon 17 Feb 2025 04:56:36 INFO test result: 
+recall@5: 0.0359    recall@10: 0.0590    recall@20: 0.0881    recall@50: 0.1468    ndcg@5: 0.0239    ndcg@10: 0.0314    ndcg@20: 0.0389    ndcg@50: 0.0508    precision@5: 0.0079    precision@10: 0.0065    precision@20: 0.0049    precision@50: 0.0033    map@5: 0.0193    map@10: 0.0223    map@20: 0.0243    map@50: 0.0262    
+Mon 17 Feb 2025 04:56:40 INFO epoch 345 training [time: 3.81s, train loss: 0.4357]
+Mon 17 Feb 2025 04:56:40 INFO epoch 345 training [time: 3.81s, train loss: 0.2205]
+Mon 17 Feb 2025 04:56:44 INFO epoch 346 training [time: 3.87s, train loss: 0.4636]
+Mon 17 Feb 2025 04:56:44 INFO epoch 346 training [time: 3.87s, train loss: 0.2494]
+Mon 17 Feb 2025 04:56:48 INFO epoch 347 training [time: 3.82s, train loss: 0.4701]
+Mon 17 Feb 2025 04:56:48 INFO epoch 347 training [time: 3.82s, train loss: 0.2215]
+Mon 17 Feb 2025 04:56:52 INFO epoch 348 training [time: 3.85s, train loss: 0.4457]
+Mon 17 Feb 2025 04:56:52 INFO epoch 348 training [time: 3.85s, train loss: 0.2409]
+Mon 17 Feb 2025 04:56:56 INFO epoch 349 training [time: 3.89s, train loss: 0.4546]
+Mon 17 Feb 2025 04:56:56 INFO epoch 349 training [time: 3.89s, train loss: 0.2479]
+Mon 17 Feb 2025 04:57:02 INFO epoch 349 evaluating [time: 3.21s, valid_score: 0.084900]
+Mon 17 Feb 2025 04:57:02 INFO valid result: 
+recall@5: 0.0356    recall@10: 0.0570    recall@20: 0.0849    recall@50: 0.1437    ndcg@5: 0.0237    ndcg@10: 0.0307    ndcg@20: 0.0378    ndcg@50: 0.0495    precision@5: 0.0075    precision@10: 0.0060    precision@20: 0.0045    precision@50: 0.0030    map@5: 0.0195    map@10: 0.0223    map@20: 0.0242    map@50: 0.0261    
+Mon 17 Feb 2025 04:57:02 INFO test result: 
+recall@5: 0.0357    recall@10: 0.0586    recall@20: 0.0881    recall@50: 0.1458    ndcg@5: 0.0238    ndcg@10: 0.0312    ndcg@20: 0.0388    ndcg@50: 0.0505    precision@5: 0.0078    precision@10: 0.0065    precision@20: 0.0049    precision@50: 0.0033    map@5: 0.0192    map@10: 0.0222    map@20: 0.0242    map@50: 0.0261    
+Mon 17 Feb 2025 04:57:06 INFO epoch 350 training [time: 3.80s, train loss: 0.4498]
+Mon 17 Feb 2025 04:57:06 INFO epoch 350 training [time: 3.80s, train loss: 0.2248]
+Mon 17 Feb 2025 04:57:10 INFO epoch 351 training [time: 3.76s, train loss: 0.4353]
+Mon 17 Feb 2025 04:57:10 INFO epoch 351 training [time: 3.76s, train loss: 0.2329]
+Mon 17 Feb 2025 04:57:13 INFO epoch 352 training [time: 3.79s, train loss: 0.4542]
+Mon 17 Feb 2025 04:57:13 INFO epoch 352 training [time: 3.79s, train loss: 0.2425]
+Mon 17 Feb 2025 04:57:17 INFO epoch 353 training [time: 3.67s, train loss: 0.4275]
+Mon 17 Feb 2025 04:57:17 INFO epoch 353 training [time: 3.67s, train loss: 0.2348]
+Mon 17 Feb 2025 04:57:21 INFO epoch 354 training [time: 3.81s, train loss: 0.4434]
+Mon 17 Feb 2025 04:57:21 INFO epoch 354 training [time: 3.81s, train loss: 0.2389]
+Mon 17 Feb 2025 04:57:27 INFO epoch 354 evaluating [time: 3.22s, valid_score: 0.084300]
+Mon 17 Feb 2025 04:57:27 INFO valid result: 
+recall@5: 0.0359    recall@10: 0.0568    recall@20: 0.0843    recall@50: 0.1435    ndcg@5: 0.0238    ndcg@10: 0.0306    ndcg@20: 0.0376    ndcg@50: 0.0494    precision@5: 0.0076    precision@10: 0.0060    precision@20: 0.0045    precision@50: 0.0030    map@5: 0.0195    map@10: 0.0222    map@20: 0.0241    map@50: 0.0260    
+Mon 17 Feb 2025 04:57:27 INFO test result: 
+recall@5: 0.0354    recall@10: 0.0589    recall@20: 0.0882    recall@50: 0.1458    ndcg@5: 0.0236    ndcg@10: 0.0313    ndcg@20: 0.0389    ndcg@50: 0.0505    precision@5: 0.0078    precision@10: 0.0065    precision@20: 0.0049    precision@50: 0.0033    map@5: 0.0191    map@10: 0.0222    map@20: 0.0242    map@50: 0.0261    
+Mon 17 Feb 2025 04:57:31 INFO epoch 355 training [time: 3.77s, train loss: 0.4482]
+Mon 17 Feb 2025 04:57:31 INFO epoch 355 training [time: 3.77s, train loss: 0.2287]
+Mon 17 Feb 2025 04:57:35 INFO epoch 356 training [time: 3.79s, train loss: 0.4224]
+Mon 17 Feb 2025 04:57:35 INFO epoch 356 training [time: 3.79s, train loss: 0.2248]
+Mon 17 Feb 2025 04:57:39 INFO epoch 357 training [time: 3.77s, train loss: 0.4349]
+Mon 17 Feb 2025 04:57:39 INFO epoch 357 training [time: 3.77s, train loss: 0.2172]
+Mon 17 Feb 2025 04:57:42 INFO epoch 358 training [time: 3.83s, train loss: 0.4316]
+Mon 17 Feb 2025 04:57:42 INFO epoch 358 training [time: 3.83s, train loss: 0.2220]
+Mon 17 Feb 2025 04:57:46 INFO epoch 359 training [time: 3.74s, train loss: 0.4304]
+Mon 17 Feb 2025 04:57:46 INFO epoch 359 training [time: 3.74s, train loss: 0.2331]
+Mon 17 Feb 2025 04:57:53 INFO epoch 359 evaluating [time: 3.20s, valid_score: 0.083800]
+Mon 17 Feb 2025 04:57:53 INFO valid result: 
+recall@5: 0.0357    recall@10: 0.0560    recall@20: 0.0838    recall@50: 0.1430    ndcg@5: 0.0237    ndcg@10: 0.0303    ndcg@20: 0.0374    ndcg@50: 0.0492    precision@5: 0.0075    precision@10: 0.0060    precision@20: 0.0045    precision@50: 0.0030    map@5: 0.0194    map@10: 0.0221    map@20: 0.0240    map@50: 0.0259    
+Mon 17 Feb 2025 04:57:53 INFO test result: 
+recall@5: 0.0359    recall@10: 0.0585    recall@20: 0.0883    recall@50: 0.1456    ndcg@5: 0.0239    ndcg@10: 0.0313    ndcg@20: 0.0389    ndcg@50: 0.0505    precision@5: 0.0079    precision@10: 0.0065    precision@20: 0.0049    precision@50: 0.0033    map@5: 0.0193    map@10: 0.0223    map@20: 0.0243    map@50: 0.0261    
+Mon 17 Feb 2025 04:57:56 INFO epoch 360 training [time: 3.80s, train loss: 0.4268]
+Mon 17 Feb 2025 04:57:56 INFO epoch 360 training [time: 3.80s, train loss: 0.2333]
+Mon 17 Feb 2025 04:58:00 INFO epoch 361 training [time: 3.86s, train loss: 0.4212]
+Mon 17 Feb 2025 04:58:00 INFO epoch 361 training [time: 3.86s, train loss: 0.2238]
+Mon 17 Feb 2025 04:58:04 INFO epoch 362 training [time: 3.78s, train loss: 0.4344]
+Mon 17 Feb 2025 04:58:04 INFO epoch 362 training [time: 3.78s, train loss: 0.2119]
+Mon 17 Feb 2025 04:58:08 INFO epoch 363 training [time: 3.75s, train loss: 0.4286]
+Mon 17 Feb 2025 04:58:08 INFO epoch 363 training [time: 3.75s, train loss: 0.2193]
+Mon 17 Feb 2025 04:58:11 INFO epoch 364 training [time: 3.74s, train loss: 0.4381]
+Mon 17 Feb 2025 04:58:11 INFO epoch 364 training [time: 3.74s, train loss: 0.2203]
+Mon 17 Feb 2025 04:58:18 INFO epoch 364 evaluating [time: 3.16s, valid_score: 0.083900]
+Mon 17 Feb 2025 04:58:18 INFO valid result: 
+recall@5: 0.0350    recall@10: 0.0564    recall@20: 0.0839    recall@50: 0.1426    ndcg@5: 0.0233    ndcg@10: 0.0302    ndcg@20: 0.0373    ndcg@50: 0.0490    precision@5: 0.0074    precision@10: 0.0060    precision@20: 0.0045    precision@50: 0.0030    map@5: 0.0191    map@10: 0.0219    map@20: 0.0238    map@50: 0.0257    
+Mon 17 Feb 2025 04:58:18 INFO test result: 
+recall@5: 0.0359    recall@10: 0.0579    recall@20: 0.0873    recall@50: 0.1443    ndcg@5: 0.0238    ndcg@10: 0.0310    ndcg@20: 0.0386    ndcg@50: 0.0502    precision@5: 0.0079    precision@10: 0.0064    precision@20: 0.0048    precision@50: 0.0032    map@5: 0.0192    map@10: 0.0221    map@20: 0.0242    map@50: 0.0260    
+Mon 17 Feb 2025 04:58:22 INFO epoch 365 training [time: 3.74s, train loss: 0.4171]
+Mon 17 Feb 2025 04:58:22 INFO epoch 365 training [time: 3.74s, train loss: 0.2211]
+Mon 17 Feb 2025 04:58:25 INFO epoch 366 training [time: 3.66s, train loss: 0.4218]
+Mon 17 Feb 2025 04:58:25 INFO epoch 366 training [time: 3.66s, train loss: 0.2119]
